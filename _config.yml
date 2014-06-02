@@ -4,7 +4,9 @@ email: marshall@mathers.com
 description: "Allied Rappers of D-12 baby"
 baseurl: ""
 url: "http://yourdomain.com"
-permalink: /:categories/:title
+collections:
+  institutions:
+    output: true
 
 # Build settings
 markdown: kramdown

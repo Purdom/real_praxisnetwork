@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 status: publish
-permalink: /institutions/praxis_program
 title: praxis program
+collections:
+  - institutions
 ---
 # praxis program 
 

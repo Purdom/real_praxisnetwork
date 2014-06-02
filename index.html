@@ -7,10 +7,10 @@ layout: default
   <h1>Allied Programs</h1>
 
   <ul class="programs">
-    {% for post in site.posts %}
+    {% for institution in site.institutions %}
       <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <span class="institution-date">{{ institution.date | date: "%b %-d, %Y" }}</span>
+        <a class="institution-link" href="{{ institution.url | prepend: site.baseurl }}">{{ institution.title }}</a>
       </li>
     {% endfor %}
   </ul>

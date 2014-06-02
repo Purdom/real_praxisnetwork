@@ -48,11 +48,12 @@ def write_markdown (row)
   contents               = "---
 layout: page
 status: publish
-permalink: /institutions/#{base_name}
+#permalink: /institutions/#{base_name}
 title: #{name_of_program}
 elsewhere:
   website: #{program_url}
-
+categories:
+  - institutions
 ---
 # #{name_of_program}
 
@@ -67,7 +68,7 @@ elsewhere:
 
   #This writes a file in the subdirectory 'institutions'
   begin
-    file = File.open("institutions/#{base_name}.md", "w")
+    file = File.open("_institutions/#{base_name}.md", "w")
     puts "Writing file for #{base_name}"
     file.write(contents) 
   rescue IOError => e

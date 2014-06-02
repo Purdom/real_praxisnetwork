@@ -33,14 +33,15 @@ end
 #these variables are local to this specific method, 
 
 def write_markdown (row)
-  timestamp              = @worksheet[row, 1]
-  name                   = @worksheet[row, 2]
-  email_address          = @worksheet[row, 3]
-  name_of_program        = @worksheet[row, 4]
-  name_of_institution    = @worksheet[row, 5]
-  address_of_program     = @worksheet[row, 6]
-  mission_statement      = @worksheet[row, 7]
-  additional_information = @worksheet[row, 8]
+  timestamp                   = @worksheet[row, 1]
+  name                        = @worksheet[row, 2]
+  email_address               = @worksheet[row, 3]
+  name_of_program             = @worksheet[row, 4]
+  program_url                 = @worksheet[row, 5]
+  name_of_institution         = @worksheet[row, 6]
+  address_of_program          = @worksheet[row, 7]
+  mission_statement           = @worksheet[row, 8]
+  areas_of_research_support   = @worksheet[row, 9]
   #square brackets indicate an array location, while () indicate a method call. a space does indicate a method call, so for one thing use a space, for more than one use ()
   base_name              = make_name name_of_program
 
@@ -49,6 +50,9 @@ layout: page
 status: publish
 permalink: /institutions/#{base_name}
 title: #{name_of_program}
+elsewhere:
+  website: #{program_url}
+
 ---
 # #{name_of_program} 
 

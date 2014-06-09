@@ -5,33 +5,26 @@
 #rubygems is not technically required, but habit
 require "rubygems"
 
-#within the context of this execution make the variables listed in the dotenv file available, keeps the variables hidden
 require "dotenv"
 
-#this is the access to google drive documents
 require "google_drive"
 
-#tells it to load the .env; classes and modules are uppercase; methods are lowercase; everything is a method in Ruby
 Dotenv.load
 
 #defines a task, named default, and tells it what to do. in this case to execute another task
 task :default => [:import]
 
-#anything in all caps is a global variable, meaning i can use it anywhere in the execution of the script (I am defining something here that I can use elsewhere) "Now, what I am doing here is being cute" said Wayne Graham. This protects it from failing to execute properly. If there is not a spreadsheet key, this tells Ruby to set it as an empty string, so .env loads the environmental variables, and this tells Ruby to use the environmental variable if available or set an empty string. Ultimately, this protects sensitive info.
+
 SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
 USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
 USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
-#def defines a method; this uses a regular expression to find spaces and replace with an underscore. Anytime this method is called, take the string i give it and returns back to me the underscore version. The .downcase tacks on a method to make the string lowcase
+
 def make_name (string)
   string.gsub(/ /,"_").downcase
 end
 
-
-
 #This method writes a markdown file for any row passed to it
-#these variables are local to this specific method.
-
 def write_markdown (row)
   timestamp                   = @worksheet[row, 1]
   name                        = @worksheet[row, 2]
@@ -42,8 +35,7 @@ def write_markdown (row)
   address_of_program          = @worksheet[row, 7]
   mission_statement           = @worksheet[row, 8]
   #areas_of_research_support   = @worksheet[row, 9]
-  #square brackets indicate an array location, while () indicate a method call. a space does indicate a method call, so for one thing use a space, for more than one use ()
-  base_name              = make_name name_of_program
+   base_name              = make_name name_of_program
 
   contents               = "---
 layout: page

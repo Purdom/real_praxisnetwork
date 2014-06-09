@@ -41,7 +41,7 @@ def write_markdown (row)
   name_of_institution         = @worksheet[row, 6]
   address_of_program          = @worksheet[row, 7]
   mission_statement           = @worksheet[row, 8]
-  areas_of_research_support   = @worksheet[row, 9]
+  #areas_of_research_support   = @worksheet[row, 9]
   #square brackets indicate an array location, while () indicate a method call. a space does indicate a method call, so for one thing use a space, for more than one use ()
   base_name              = make_name name_of_program
 
@@ -63,7 +63,7 @@ categories:
 
   #{mission_statement}
 
-  #{additional_information}
+  
   "
 
   #This writes a file in the subdirectory 'institutions'
@@ -79,7 +79,7 @@ categories:
 
   #
 end
-
+desc "import all the things."
 task :import do
   puts "starting import"
 

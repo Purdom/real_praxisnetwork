@@ -1,16 +1,20 @@
 ---
-layout: post
+layout: page
 status: publish
+#permalink: /institutions/praxis_program
 title: praxis program
-collections:
+elsewhere:
+  website: uva
+categories:
   - institutions
 ---
-# praxis program 
+# praxis program
 
-uva
+  Charlottesville, VA United States, 22903
 
 ## Mission Statement
 
-blah blah
+  blah blah
 
-blah blah
+  
+  

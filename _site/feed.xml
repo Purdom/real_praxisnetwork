@@ -6,5 +6,16 @@
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
+      <item>
+        <title>test</title>
+        <description>&lt;h1 id=&quot;text&quot;&gt;text&lt;/h1&gt;
+
+&lt;p&gt;Some text&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Jun 2014 11:27:22 -0400</pubDate>
+        <link>http://yourdomain.com/institutions%20undergraduate%20graduate/2014/06/16/wayne-is-awesome/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institutions%20undergraduate%20graduate/2014/06/16/wayne-is-awesome/</guid>
+      </item>
+    
   </channel>
 </rss>

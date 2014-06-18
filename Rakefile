@@ -49,7 +49,7 @@ namespace :import do
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
       #2..ws.num_rows.each do |row|
-      write_instmarkdown row 
+      write_studentmarkdown row 
 
     end
   end
@@ -79,35 +79,6 @@ def write_file(timestamp,base_name, contents)
 
 end
 
-#This method writes a markdown file (for students) for any row passed to it
-def write_studentmarkdown (row)
-  timestamp                   = @worksheet[row, 1]
-  name                        = @worksheet[row, 2]
-  email                       = @worksheet[row, 3]
-  name_of_program             = @worksheet[row, 7]
-  year_entering_fellowship    = @worksheet[row, 4]
-  personal_website_url        = @worksheet[row, 5]
-  twitter_handle              = @worksheet[row, 6]
-  base_name              = make_name name
-
-  contents               = "---
-layout: post 
-status: publish
-permalink: posts/students/#{base_name}
-title: #{name}
-categories: 
-elsewhere:
-  website: #{personal_website_url}
----
-# #{name}
-
-  #{name_of__of_program}
-  #{year_entering_fellowship}
-  #{personal_website_url}
-  #{twitter_handle}
-
-  "
-end
 
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_instmarkdown (row)

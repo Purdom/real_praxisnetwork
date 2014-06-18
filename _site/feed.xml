@@ -17,5 +17,14 @@
         <guid isPermaLink="true">http://yourdomain.com/institutions%20undergraduate%20graduate/2014/06/16/wayne-is-awesome/</guid>
       </item>
     
+      <item>
+        <title>foo</title>
+        <description>&lt;h1 id=&quot;hi&quot;&gt;hi&lt;/h1&gt;
+</description>
+        <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2014/06/13/test/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/06/13/test/</guid>
+      </item>
+    
   </channel>
 </rss>

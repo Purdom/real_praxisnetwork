@@ -122,7 +122,7 @@ categories:
   #
 end
 
-desc "import all studets."
+desc "import all students."
 task :students do
   puts "starting import"
 

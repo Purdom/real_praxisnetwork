@@ -10,18 +10,53 @@ require "date"
 
 Dotenv.load
 
+SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
+USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
+USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
+
+task :default => 'import:all'
+
 namespace :import do
 
-  task          :institutions
-  task          :students
-  task :all => [:institutions, :students]
+  desc "import all institutions."
+  task :institutions do
+    puts "starting import"
 
+    #this logs me in to google drive and gives me access to my documents
+    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 
-  SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
-  USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
-  USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
+    #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
+    @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
 
-  puts "importing files" 
+    #this is telling the script to grab each row and then passes it to the method write_markdown, which
+    for row in 2..@worksheet.num_rows
+      #2..ws.num_rows.each do |row|
+      write_instmarkdown row 
+
+    end
+  end
+
+  desc "import all students."
+  task :students do
+    puts "starting import"
+
+    #this logs me in to google drive and gives me access to my documents
+    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+
+    #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
+    @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
+
+    #this is telling the script to grab each row and then passes it to the method write_markdown, which
+    for row in 2..@worksheet.num_rows
+      #2..ws.num_rows.each do |row|
+      write_instmarkdown row 
+
+    end
+  end
+
+  desc "Generate markdup for both institutions and students"
+  task :all => ['import:institutions', 'import:students']
+
 end
 
 def make_name (string)
@@ -122,40 +157,8 @@ categories:
   #
 end
 
-desc "import all students."
-task :students do
-  puts "starting import"
-
-  #this logs me in to google drive and gives me access to my documents
-  session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-  #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
-  @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
-
-  #this is telling the script to grab each row and then passes it to the method write_markdown, which
-  for row in 2..@worksheet.num_rows
-    #2..ws.num_rows.each do |row|
-    write_instmarkdown row 
-
-  end
-end
 
 
-desc "import all institutions."
-task :institutions do
-  puts "starting import"
 
-  #this logs me in to google drive and gives me access to my documents
-  session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 
-  #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
-  @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
-
-  #this is telling the script to grab each row and then passes it to the method write_markdown, which
-  for row in 2..@worksheet.num_rows
-    #2..ws.num_rows.each do |row|
-    write_instmarkdown row 
-
-  end
-end
 #end

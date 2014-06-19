@@ -48,12 +48,7 @@ namespace :import do
 
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
-<<<<<<< HEAD
-      #2..ws.num_rows.each do |row|
-      write_studentmarkdown row 
-=======
       write_studentmarkdown row
->>>>>>> b713af8416afd18e7ee21d64d3cca4fd859aa679
 
     end
   end
@@ -66,7 +61,7 @@ end
 def parse_date(date)
   parts = date.split(' ')
   date_components = parts[0].split('/')
-  "%04d-%02d-%02d" % [date_components[2], date_components[1], date_components[0]]
+  "%04d-%02d-%02d" % [date_components[2], date_components[0], date_components[1]]
 end
 
 def make_name (string, date = Date.now)
@@ -91,8 +86,6 @@ def write_file(base_name, contents)
 
 end
 
-<<<<<<< HEAD
-=======
 #This method writes a markdown file (for students) for any row passed to it
 def write_studentmarkdown (row)
   timestamp                   = @worksheet[row, 1]
@@ -109,9 +102,7 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{name}
-categories:
-elsewhere:
-  website: #{personal_website_url}
+website: #{personal_website_url}
 ---
 # #{name}
 
@@ -124,7 +115,6 @@ elsewhere:
 
   write_file(base_name, contents)
 end
->>>>>>> b713af8416afd18e7ee21d64d3cca4fd859aa679
 
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_instmarkdown (row)
@@ -146,11 +136,8 @@ layout: posts
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{name_of_program}
-categories:
-elsewhere:
-  website: #{program_url}
-categories:
-  - institutions
+categories: #{areas_of_research_support.gsub(/,/, ' ')}
+website: #{program_url}
 ---
 # #{name_of_program}
 

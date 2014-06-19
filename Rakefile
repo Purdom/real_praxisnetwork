@@ -31,7 +31,7 @@ namespace :import do
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
       #2..ws.num_rows.each do |row|
-      write_instmarkdown row 
+      write_instmarkdown row
 
     end
   end
@@ -48,8 +48,12 @@ namespace :import do
 
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
+<<<<<<< HEAD
       #2..ws.num_rows.each do |row|
       write_studentmarkdown row 
+=======
+      write_studentmarkdown row
+>>>>>>> b713af8416afd18e7ee21d64d3cca4fd859aa679
 
     end
   end
@@ -59,15 +63,23 @@ namespace :import do
 
 end
 
-def make_name (string)
-  string.gsub(/ /,"_").downcase
+def parse_date(date)
+  parts = date.split(' ')
+  date_components = parts[0].split('/')
+  "%04d-%02d-%02d" % [date_components[2], date_components[1], date_components[0]]
 end
 
-def write_file(timestamp,base_name, contents)
+def make_name (string, date = Date.now)
+  d = parse_date(date)
+  slug = string.gsub(/ /,"_").downcase
+  "#{d}-#{slug}"
+end
+
+def write_file(base_name, contents)
+
+  puts "Writing #{base_name}..."
   #This writes a file in the subdirectory 'posts'
   begin
-    time = "#{timestamp}"
-    Date.strptime(time, "%F")
     file = File.open("_posts/#{base_name}.md", "w")
     file.write(contents)
   rescue IOError => e
@@ -79,6 +91,40 @@ def write_file(timestamp,base_name, contents)
 
 end
 
+<<<<<<< HEAD
+=======
+#This method writes a markdown file (for students) for any row passed to it
+def write_studentmarkdown (row)
+  timestamp                   = @worksheet[row, 1]
+  name                        = @worksheet[row, 2]
+  email                       = @worksheet[row, 3]
+  name_of_program             = @worksheet[row, 7]
+  year_entering_fellowship    = @worksheet[row, 4]
+  personal_website_url        = @worksheet[row, 5]
+  twitter_handle              = @worksheet[row, 6]
+  base_name                   = make_name(name, timestamp)
+
+  contents               = "---
+layout: post
+status: publish
+permalink: posts/students/#{base_name}
+title: #{name}
+categories:
+elsewhere:
+  website: #{personal_website_url}
+---
+# #{name}
+
+  #{name_of_program}
+  #{year_entering_fellowship}
+  #{personal_website_url}
+  #{twitter_handle}
+
+  "
+
+  write_file(base_name, contents)
+end
+>>>>>>> b713af8416afd18e7ee21d64d3cca4fd859aa679
 
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_instmarkdown (row)
@@ -91,14 +137,16 @@ def write_instmarkdown (row)
   address_of_program          = @worksheet[row, 6]
   mission_statement           = @worksheet[row, 7]
   areas_of_research_support   = @worksheet[row, 8]
-  base_name              = make_name name_of_program
+  base_name                   = make_name(name_of_program, timestamp)
+
   puts areas_of_research_support
+
   contents               = "---
-layout: posts 
+layout: posts
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{name_of_program}
-categories: 
+categories:
 elsewhere:
   website: #{program_url}
 categories:
@@ -113,23 +161,6 @@ categories:
   #{mission_statement}
 
   "
-  write_file("institutions", base_name, contents)
-  #This writes a file in the subdirectory 'institutions'
-  # begin
-  #file = File.open("_institutions/#{base_name}.md", "w")
-  #puts "Writing file for #{base_name}"
-  #file.write(contents) 
-  #rescue IOError => e
-  #puts "File not writable."
-  #ensure
-  #file.close unless file == nil
-  #end
-
-  #
+  write_file(base_name, contents)
 end
 
-
-
-
-
-#end

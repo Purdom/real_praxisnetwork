@@ -90,18 +90,18 @@ def write_studentmarkdown (row)
   year_entering_fellowship    = @worksheet[row, 4]
   personal_website            = @worksheet[row, 5]
   twitter_handle              = @worksheet[row, 6]
-  base_name                   = make_name(name, timestamp)
+  base_name                   = make_name(student_name, timestamp)
 
   contents               = "---
 layout: post
 status: publish
 permalink: posts/students/#{base_name}
-title: #{name}
+title: #{student_name}
 website: #{personal_website}
 ---
-# #{name}
+# #{student_name}
 
-  #{name_program}
+  #{program_name}
   #{year_entering_fellowship}
   #{personal_website}
   #{twitter_handle}
@@ -112,7 +112,7 @@ website: #{personal_website}
 end
 
 #This method writes a markdown file (for institutions) for any row passed to it
-def write_instmarkdown (row)
+def write_institutionsmarkdown (row)
   timestamp                   = @worksheet[row, 1]
   contact_name                = @worksheet[row, 2]
   email                       = @worksheet[row, 3]
@@ -122,10 +122,10 @@ def write_instmarkdown (row)
   program_address             = @worksheet[row, 6]
   mission_statement           = @worksheet[row, 7]
   supported_students          = @worksheet[row, 8]
-  base_name                   = make_name(name_of_program, timestamp)
+  base_name                   = make_name(program_name, timestamp)
 
-  puts areas_of_research_support
-
+  puts supported_students
+ 
   contents               = "---
 layout: posts
 status: publish

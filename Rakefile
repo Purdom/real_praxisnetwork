@@ -22,16 +22,14 @@ namespace :import do
   task :institutions do
     puts "starting import"
 
-    #this logs me in to google drive and gives me access to my documents
     session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 
-    #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
     @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
 
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
       #2..ws.num_rows.each do |row|
-      write_instmarkdown row
+      write_institutionsmarkdown row
 
     end
   end
@@ -40,20 +38,17 @@ namespace :import do
   task :students do
     puts "starting import"
 
-    #this logs me in to google drive and gives me access to my documents
     session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 
-    #this clarifies which file within google drive i want. this grabs the spreadsheet based on the key and returns worksheet 0
     @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
 
-    #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
       write_studentmarkdown row
 
     end
   end
 
-  desc "Generate markdup for both institutions and students"
+  desc "Generate markup for both institutions and students"
   task :all => ['import:institutions', 'import:students']
 
 end
@@ -89,11 +84,11 @@ end
 #This method writes a markdown file (for students) for any row passed to it
 def write_studentmarkdown (row)
   timestamp                   = @worksheet[row, 1]
-  name                        = @worksheet[row, 2]
-  email                       = @worksheet[row, 3]
-  name_of_program             = @worksheet[row, 7]
+  student_name                = @worksheet[row, 2]
+  student_email               = @worksheet[row, 3]
+  program_name                = @worksheet[row, 7]
   year_entering_fellowship    = @worksheet[row, 4]
-  personal_website_url        = @worksheet[row, 5]
+  personal_website            = @worksheet[row, 5]
   twitter_handle              = @worksheet[row, 6]
   base_name                   = make_name(name, timestamp)
 
@@ -102,13 +97,13 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{name}
-website: #{personal_website_url}
+website: #{personal_website}
 ---
 # #{name}
 
-  #{name_of_program}
+  #{name_program}
   #{year_entering_fellowship}
-  #{personal_website_url}
+  #{personal_website}
   #{twitter_handle}
 
   "
@@ -119,14 +114,14 @@ end
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_instmarkdown (row)
   timestamp                   = @worksheet[row, 1]
-  name                        = @worksheet[row, 2]
-  email_address               = @worksheet[row, 3]
-  name_of_program             = @worksheet[row, 4]
+  contact_name                = @worksheet[row, 2]
+  email                       = @worksheet[row, 3]
+  program_name                = @worksheet[row, 4]
   program_url                 = @worksheet[row, 9]
-  name_of_institution         = @worksheet[row, 5]
-  address_of_program          = @worksheet[row, 6]
+  institution_name            = @worksheet[row, 5]
+  program_address             = @worksheet[row, 6]
   mission_statement           = @worksheet[row, 7]
-  areas_of_research_support   = @worksheet[row, 8]
+  supported_students          = @worksheet[row, 8]
   base_name                   = make_name(name_of_program, timestamp)
 
   puts areas_of_research_support
@@ -135,13 +130,13 @@ def write_instmarkdown (row)
 layout: posts
 status: publish
 #permalink: posts/institutions/#{base_name}
-title: #{name_of_program}
-categories: #{areas_of_research_support.gsub(/,/, ' ')}
+title: #{program_name}
+categories: #{supported_students.gsub(/,/, ' ')}
 website: #{program_url}
 ---
-# #{name_of_program}
+# #{program_name}
 
-  #{name_of_institution}
+  #{institution_name}
 
 ## Mission Statement
 

@@ -39,6 +39,22 @@
       </item>
     
       <item>
+        <title>twelve mile</title>
+        <description>&lt;h1 id=&quot;twelve-mile&quot;&gt;twelve mile&lt;/h1&gt;
+
+&lt;p&gt;d-town&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;ipsum lorem&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 24 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/other/2014/06/24/twelve_mile/</link>
+        <guid isPermaLink="true">http://yourdomain.com/other/2014/06/24/twelve_mile/</guid>
+      </item>
+    
+      <item>
         <title>testing again</title>
         <description>&lt;h1 id=&quot;testing-again&quot;&gt;testing again&lt;/h1&gt;
 
@@ -135,22 +151,6 @@
         <pubDate>Tue, 10 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/undergraduate/program/graduate/program/2014/06/10/ghi/</link>
         <guid isPermaLink="true">http://yourdomain.com/undergraduate/program/graduate/program/2014/06/10/ghi/</guid>
-      </item>
-    
-      <item>
-        <title>praxis program</title>
-        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;praxis program&lt;/h1&gt;
-
-&lt;p&gt;uva&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;blah blah&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/institutions/2014/06/05/praxis_program/</link>
-        <guid isPermaLink="true">http://yourdomain.com/institutions/2014/06/05/praxis_program/</guid>
       </item>
     
   </channel>

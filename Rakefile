@@ -1,7 +1,5 @@
 #! /usr/bin/env ruby
 
-#This is what the script requires to run, what needs to be available
-
 #rubygems is not technically required, but habit
 require "rubygems"
 require "dotenv"
@@ -62,7 +60,7 @@ end
 def make_name (string, date = Date.now)
   d = parse_date(date)
   slug = string.gsub(/ /,"_").downcase
-  "#{d}-#{slug}"
+  "#{d}-#{slug}" #look at what wayne did with slugify in the codespeak
 end
 
 def write_file(base_name, contents)
@@ -85,7 +83,7 @@ end
 def write_studentmarkdown (row)
   timestamp                   = @worksheet[row, 1]
   student_name                = @worksheet[row, 2]
-  student_email               = @worksheet[row, 3]
+  #student_email               = @worksheet[row, 3]
   program_name                = @worksheet[row, 7]
   year_entering_fellowship    = @worksheet[row, 4]
   personal_website            = @worksheet[row, 5]
@@ -114,24 +112,26 @@ end
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_institutionsmarkdown (row)
   timestamp                   = @worksheet[row, 1]
-  contact_name                = @worksheet[row, 2]
-  email                       = @worksheet[row, 3]
+  #contact_name               = @worksheet[row, 2]
+  #email                      = @worksheet[row, 3]
   program_name                = @worksheet[row, 4]
   program_url                 = @worksheet[row, 9]
   institution_name            = @worksheet[row, 5]
-  program_address             = @worksheet[row, 6]
+  #program_address            = @worksheet[row, 6]
   mission_statement           = @worksheet[row, 7]
-  supported_students          = @worksheet[row, 8]
+  population_supported        = @worksheet[row, 8]
+  other_population_supported  = @worksheet[row, 10]
   base_name                   = make_name(program_name, timestamp)
 
-  puts supported_students
- 
+  puts population_supported
+
   contents               = "---
 layout: posts
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{program_name}
-categories: #{supported_students.gsub(/,/, ' ')}
+categories: #{population_supported.gsub(/,/, ' ')}
+other: #{other_population_supported}
 website: #{program_url}
 ---
 # #{program_name}

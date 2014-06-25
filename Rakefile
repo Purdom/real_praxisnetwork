@@ -20,7 +20,7 @@ def login
   @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 end
 
-def worksheet(key)
+def get_worksheet(key)
   login
   @worksheet = @session.spreadsheet_by_key(key).worksheets[0]
 end
@@ -31,7 +31,7 @@ namespace :import do
   task :institutions do
     puts "starting import"
 
-    worksheet(ENV['INSTITUTIONS_KEY'])
+    get_worksheet(ENV['INSTITUTIONS_KEY'])
 
     #this is telling the script to grab each row and then passes it to the method write_markdown, which
     for row in 2..@worksheet.num_rows
@@ -42,10 +42,8 @@ namespace :import do
   desc "import all students."
   task :students do
     puts "starting import"
-    login
-    #@session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 
-    @worksheet = @session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
+    get_worksheet(ENV['PEOPLE_FORM_KEY'])
 
     for row in 2..@worksheet.num_rows
       write_studentmarkdown row

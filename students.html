@@ -7,7 +7,7 @@ title: Praxis Network Student Directory
 
 <h1>Software Development</h1>
 <ul>
-  {% for posts in site.categories["software"] $}
+  {% for posts in site.categories["software"] %}
    <li>
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
@@ -17,7 +17,7 @@ title: Praxis Network Student Directory
 
 <h1>Spatial Humanities</h1>
 <ul>
-  {% for posts in site.categories["spatial"] $}
+  {% for posts in site.categories["spatial"] %}
    <li>
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
@@ -27,7 +27,7 @@ title: Praxis Network Student Directory
 
 <h1>Textual Analysis</h1>
 <ul>
-  {% for posts in site.categoriesi["textual"] $}
+  {% for posts in site.categoriesi["textual"] %}
    <li>
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
@@ -37,7 +37,7 @@ title: Praxis Network Student Directory
 
 <h1>Visualizations</h1>
 <ul>
-  {% for posts in site.categories["visualizations"] $}
+  {% for posts in site.categories["visualizations"] %}
    <li>
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>

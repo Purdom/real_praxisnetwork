@@ -1,0 +1,28 @@
+---
+layout: default
+title: Directory of Allied Programs
+---
+<p>
+Title
+
+(navigation)
+<ul>
+List of Allied Programs (all)
+List of Graduate Programs
+List of Undergraduate Programs
+List of Other Programs
+</ul>
+</p>
+
+<h1>Graduate Programs</h1>
+<ul>
+  {% for post in site.categories['Graduate'] %}
+  <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul> 
+
+
+

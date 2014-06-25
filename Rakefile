@@ -88,6 +88,8 @@ def write_studentmarkdown (row)
   year_entering_fellowship    = @worksheet[row, 4]
   personal_website            = @worksheet[row, 5]
   twitter_handle              = @worksheet[row, 6]
+  research_area               = @worksheet[row, 8]
+  other_research_areas        = @worksheet[row, 9]
   base_name                   = make_name(student_name, timestamp)
 
   contents               = "---
@@ -95,6 +97,8 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
+categories: #{research_area.gsub(/,/, ' ')}
+other: #{other_research_areas}
 website: #{personal_website}
 ---
 # #{student_name}

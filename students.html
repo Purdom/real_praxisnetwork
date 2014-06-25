@@ -1,0 +1,46 @@
+---
+layout: default
+title: Praxis Network Student Directory
+----
+<h1>Praxis Network Student Directory</h1>
+<p>Brief introduction to the purpose and audience of the student directory.</p>
+
+<h1>Software Development</h1>
+<ul>
+  {% for posts in site.categories["software"] $}
+   <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h1>Spatial Humanities</h1>
+<ul>
+  {% for posts in site.categories["spatial"] $}
+   <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h1>Textual Analysis</h1>
+<ul>
+  {% for posts in site.categoriesi["textual"] $}
+   <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h1>Visualizations</h1>
+<ul>
+  {% for posts in site.categories["visualizations"] $}
+   <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul>

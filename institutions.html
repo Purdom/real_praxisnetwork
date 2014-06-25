@@ -5,7 +5,7 @@ title: Directory of Allied Programs
 <p>
 Title
 
-(navigation)
+
 <ul>
 List of Allied Programs (all)
 List of Graduate Programs
@@ -16,13 +16,37 @@ List of Other Programs
 
 <h1>Graduate Programs</h1>
 <ul>
-  {% for post in site.categories['Graduate'] %}
+  {% for post in site.categories['graduate'] %}
   <li>
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
   </li>
   {% endfor %}
 </ul> 
+
+
+<h1>Undergraduate Programs</h1>
+<ul>
+  {% for post in site.categories['undergraduate'] %}
+  <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+  {% endfor %}
+</ul> 
+
+<h1>Other Populations Supported</h1>
+<ul>
+  {% for post in site.categories['other'] %}
+  <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  {{post.other}}
+  </li>
+  {% endfor %}
+</ul> 
+
+
 
 
 

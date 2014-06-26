@@ -1,12 +1,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
-document.ready(function(){
-    $("#grad-programs").isotope({
-itemSelector: '.grad-program',
-layoutMode: 'fitRows'
-
-});
+    $('document').ready(function(){
+        $("#grad-programs").isotope({
+            itemSelector: '.grad-program',
+            layoutMode: 'vertical',
+        });
     });
-
 </script>

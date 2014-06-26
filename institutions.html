@@ -18,11 +18,11 @@ List of Other Programs
 <div id="grad-programs">
   {% for post in site.categories['graduate'] %}
   <div class="grad-program">
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
   </a>
   </div>
   {% endfor %}
-</div> 
+</div>
 
 
 <h1>Undergraduate Programs</h1>
@@ -33,7 +33,7 @@ List of Other Programs
   </a>
   </li>
   {% endfor %}
-</ul> 
+</ul>
 
 <h1>Other Populations Supported</h1>
 <ul>
@@ -44,7 +44,7 @@ List of Other Programs
   {{post.other}}
   </li>
   {% endfor %}
-</ul> 
+</ul>
 
 
 

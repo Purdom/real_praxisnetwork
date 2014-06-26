@@ -52,7 +52,7 @@ namespace :import do
 end
 
 def parse_date(date)
-  parts = date.split(' ')
+  parts = date.to_s.split(' ')
   date_components = parts[0].split('/')
   "%04d-%02d-%02d" % [date_components[2], date_components[0], date_components[1]]
 end

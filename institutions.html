@@ -15,14 +15,14 @@ List of Other Programs
 </p>
 
 <h1>Graduate Programs</h1>
-<ul>
+<div id="grad-programs">
   {% for post in site.categories['graduate'] %}
-  <li>
+  <div class="grad-program">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
-  </li>
+  </div>
   {% endfor %}
-</ul> 
+</div> 
 
 
 <h1>Undergraduate Programs</h1>

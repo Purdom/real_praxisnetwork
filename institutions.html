@@ -14,39 +14,40 @@ List of Other Programs
 </ul>
 </p>
 
-<h1>Graduate Programs</h1>
-<div id="grad-programs">
-  {% for post in site.categories['graduate'] %}
-  <div class="grad-program">
-  <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
-  </a>
+<div id="programs">
+<div>
+   <h1>Graduate Programs</h1>
+    <div id="grad-programs">
+      {% for post in site.categories['graduate'] %}
+      <div class="grad-program">
+      <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
+      </a>
+      </div>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
+
+
+  <h1>Undergraduate Programs</h1>
+  <div>
+      {% for post in site.categories['undergraduate'] %}
+       <div>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
+          </a>
+        </div>
+      {% endfor %}
+  </div>
+
+  <h1>Other Populations Supported</h1>
+  <div>
+    {% for post in site.categories['other'] %}
+      <div>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
+        </a>
+        {{post.other}}
+      </div>
+    {% endfor %}
+  </div>
+
 </div>
-
-
-<h1>Undergraduate Programs</h1>
-<ul>
-  {% for post in site.categories['undergraduate'] %}
-  <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
-
-<h1>Other Populations Supported</h1>
-<ul>
-  {% for post in site.categories['other'] %}
-  <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  {{post.other}}
-  </li>
-  {% endfor %}
-</ul>
-
-
-
-
 

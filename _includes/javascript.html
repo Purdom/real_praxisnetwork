@@ -5,6 +5,10 @@
         $("#grad-programs").isotope({
             itemSelector: '.grad-program',
             layoutMode: 'vertical',
+            getSortData: {
+                name: '.name'
+            },
+            sortBy: 'name'
         });
     });
 </script>

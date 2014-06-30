@@ -7,6 +7,22 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>capitals Matter</title>
+        <description>&lt;h1 id=&quot;capitals-matter&quot;&gt;capitals Matter&lt;/h1&gt;
+
+&lt;p&gt;UVA&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;lorem.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 30 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/other/program/2014/06/30/capitals_matter/</link>
+        <guid isPermaLink="true">http://yourdomain.com/other/program/2014/06/30/capitals_matter/</guid>
+      </item>
+    
+      <item>
         <title>THEPROGRAM</title>
         <description>&lt;h1 id=&quot;theprogram&quot;&gt;THEPROGRAM&lt;/h1&gt;
 
@@ -23,8 +39,8 @@
       </item>
     
       <item>
-        <title>praxis program</title>
-        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;praxis program&lt;/h1&gt;
+        <title>Praxis program</title>
+        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;Praxis program&lt;/h1&gt;
 
 &lt;p&gt;lab&lt;/p&gt;
 
@@ -39,8 +55,8 @@
       </item>
     
       <item>
-        <title>praxis-lite</title>
-        <description>&lt;h1 id=&quot;praxis-lite&quot;&gt;praxis-lite&lt;/h1&gt;
+        <title>Praxis-lite</title>
+        <description>&lt;h1 id=&quot;praxis-lite&quot;&gt;Praxis-lite&lt;/h1&gt;
 
 &lt;p&gt;uva&lt;/p&gt;
 

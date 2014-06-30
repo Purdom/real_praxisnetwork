@@ -2,11 +2,12 @@
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
     $('document').ready(function(){
-        $("#grad-programs").isotope({
-            itemSelector: '.grad-program',
+        var container = $("#program-list");
+        container.isotope({
+            itemSelector: '.program',
             layoutMode: 'vertical',
             getSortData: {
-                name: '.name'
+                name: '[data-name]'
             },
             sortBy: 'name'
         });

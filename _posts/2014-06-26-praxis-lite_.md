@@ -2,12 +2,12 @@
 layout: posts
 status: publish
 #permalink: posts/institutions/2014-06-26-praxis-lite_
-title: praxis-lite 
+title: Praxis-lite 
 categories: Other Program
 other: library
 website: praxis.com
 ---
-# praxis-lite 
+# Praxis-lite 
 
   uva
 

@@ -2,12 +2,12 @@
 layout: posts
 status: publish
 #permalink: posts/institutions/2014-06-26-praxis_program
-title: praxis program
+title: Praxis program
 categories: Undergraduate Program
 other: 
 website: whatchagot.com
 ---
-# praxis program
+# Praxis program
 
   lab
 

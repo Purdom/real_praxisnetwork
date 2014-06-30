@@ -2,51 +2,42 @@
 layout: default
 title: Directory of Allied Programs
 ---
-<p>
-Title
-
-
-<ul>
-List of Allied Programs (all)
-List of Graduate Programs
-List of Undergraduate Programs
-List of Other Programs
-</ul>
-</p>
 
 <div id="programs">
-<div>
-   <h1>Graduate Programs</h1>
-    <div id="grad-programs">
-      {% for post in site.categories['graduate'] %}
-      <div class="grad-program">
-      <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
-      </a>
-      </div>
-      {% endfor %}
-    </div>
+
+  <div id="filters">
+    <ul>
+      <li data-filter="*">All Programs</li>
+      <li data-filter=".grad">Graduate Programs</li>
+      <li data-filter=".undergrad">Undergraduate Programs</li>
+      <li data-filter=".other">Other Programs</li>
+    </ul>
   </div>
 
+  <h3>the list of program</h3>
 
-  <h1>Undergraduate Programs</h1>
-  <div>
-      {% for post in site.categories['undergraduate'] %}
-       <div>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
-          </a>
-        </div>
-      {% endfor %}
-  </div>
-
-  <h1>Other Populations Supported</h1>
-  <div>
-    {% for post in site.categories['other'] %}
-      <div>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
-        </a>
-        {{post.other}}
-      </div>
+   <div id="program-list">
+     {% for post in site.categories['graduate'] %}
+     <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+       <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
+       </a>
+     </div>
     {% endfor %}
+
+      {% for post in site.categories['undergraduate'] %}
+      <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+         <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
+         </a>
+      </div>
+      {% endfor %}
+
+      {% for post in site.categories['other'] %}
+      <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+           <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
+           </a>
+           {{post.other}}
+      </div>
+      {% endfor %}
   </div>
 
 </div>

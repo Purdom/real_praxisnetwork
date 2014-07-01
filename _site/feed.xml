@@ -7,6 +7,22 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>ohio state</title>
+        <description>&lt;h1 id=&quot;ohio-state&quot;&gt;ohio state&lt;/h1&gt;
+
+&lt;p&gt;ohio state university&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;ohio. lorem. &lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/undergraduate/program/2014/07/01/ohio_state/</link>
+        <guid isPermaLink="true">http://yourdomain.com/undergraduate/program/2014/07/01/ohio_state/</guid>
+      </item>
+    
+      <item>
         <title>capitals Matter</title>
         <description>&lt;h1 id=&quot;capitals-matter&quot;&gt;capitals Matter&lt;/h1&gt;
 

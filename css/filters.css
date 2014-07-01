@@ -1,3 +1,46 @@
+body {
+    color: white;
+}
+
+/*#filters {
+    float: left;
+}
+
+#program-list {
+    float: right;
+}*/
+
+#filters button {
+    color: white;
+    background-color: #005766;
+    padding: 5px;
+}
+
+.program a {
+    color: white;
+}
+
 .is-checked {
-  background-color: red;
+  background-color: #19DDFF;
+}
+
+.program {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.graduate {
+    background-color: #FF6600;
+}
+
+.undergraduate {
+    background-color: #0083AA;
+}
+
+.other {
+    background-color: #1B2544;
 }

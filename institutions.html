@@ -5,34 +5,30 @@ title: Directory of Allied Programs
 
 <div id="programs">
 
-  <div id="filters">
-    <ul>
-      <li data-filter="*">All Programs</li>
-      <li data-filter=".grad">Graduate Programs</li>
-      <li data-filter=".undergrad">Undergraduate Programs</li>
-      <li data-filter=".other">Other Programs</li>
-    </ul>
+  <div id="filters" class="button-group">
+      <button data-filter="*">All Programs</button>
+      <button data-filter=".grad">Graduate Programs</button>
+      <button data-filter=".undergrad">Undergraduate Programs</button>
+      <button data-filter=".other">Other Programs</button>
   </div>
-
-  <h3>the list of program</h3>
 
    <div id="program-list">
      {% for post in site.categories['graduate'] %}
-     <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+     <div class="program grad" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
        <a href="{{ post.url | prepend: site.baseurl }}" class='name'>{{ post.title }}
        </a>
      </div>
     {% endfor %}
 
       {% for post in site.categories['undergraduate'] %}
-      <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+      <div class="program undergrad" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
          <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
          </a>
       </div>
       {% endfor %}
 
       {% for post in site.categories['other'] %}
-      <div class="program" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+      <div class="program other" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
            <a href="{{ post.url | prepend: site.baseurl }}" class="name">{{ post.title }}
            </a>
            {{post.other}}

@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="http://praxis-network.org/c/styles.css" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="filters.css">
+    <link rel="stylesheet" href="/css/filters.css">
 
 </head>
 
@@ -159,7 +159,9 @@
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
     $('document').ready(function(){
+        // select container for isotope instance
         var container = $("#program-list");
+        // initialize isotope instance with options
         container.isotope({
             itemSelector: '.program',
             layoutMode: 'vertical',
@@ -167,6 +169,15 @@
                 name: '[data-name]'
             },
             sortBy: 'name'
+        });
+        // script for button click filters
+        $('#filters').on('click', 'button', function(){
+            var filterValue = $( this ).attr('data-filter');
+            container.isotope({ filter: filterValue });
+            //removes .is-checked from other buttons
+            $('#filters').children('button').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
         });
     });
 </script>

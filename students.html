@@ -7,41 +7,41 @@ title: Praxis Network Student Directory
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ante libero. Sed rutrum enim ut commodo accumsan. Ut nec justo sollicitudin, dignissim nulla eu, consectetur ipsum. Suspendisse blandit justo at mi accumsan, vel sollicitudin purus vulputate. Cras mollis hendrerit dolor sit amet pretium. Ut congue, ligula ut mattis commodo, ligula turpis auctor massa, non dapibus libero nunc vitae turpis. Vestibulum odio neque, malesuada quis semper sed, pellentesque sit amet lacus. Praesent in consectetur eros. Cras porta, sapien eu porttitor bibendum, lectus metus scelerisque eros, sit amet venenatis felis risus vel erat.</p>
 
 <h1>Software Development</h1>
-<ul>
+<div id="software-foci">
   {% for post in site.categories['software'] %}
-   <li>
+  <div class="software-focus">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
-  </li>
+  </div>
   {% endfor %}
-</ul>
+</div> 
 
 <h1>Spatial Humanities</h1>
-<ul>
-  {% for posts in site.categories['spatial'] %}
-   <li>
+<div id="spatial-foci">
+  {% for post in site.categories['spatial'] %}
+  <div class="spatial-focus">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
-  </li>
+  </div>
   {% endfor %}
-</ul>
+</div> 
 
 <h1>Textual Analysis</h1>
-<ul>
-  {% for posts in site.categoriesi['textual'] %}
-   <li>
+<div id="textual-foci">
+  {% for post in site.categories['textual'] %}
+  <div class="textual-focus">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
-  </li>
+  </div>
   {% endfor %}
-</ul>
+</div>
 
 <h1>Visualizations</h1>
-<ul>
-  {% for posts in site.categories['visualizations'] %}
-   <li>
+<div id=<"visualization-foci">
+  {% for post in site.categories['visualization'] %}
+  <div class=<"visualization-focus">
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
   </a>
-  </li>
+  </div>
   {% endfor %}
-</ul>
+</div> 

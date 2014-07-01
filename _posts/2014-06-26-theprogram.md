@@ -3,7 +3,7 @@ layout: posts
 status: publish
 #permalink: posts/institutions/2014-06-26-theprogram
 title: THEPROGRAM
-categories: Graduate Program
+categories: [institution, Graduate Program]
 other: 
 website: www.cnn.com
 ---

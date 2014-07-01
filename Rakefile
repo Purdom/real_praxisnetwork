@@ -20,15 +20,8 @@ namespace :import do
   task :institutions do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
-
-    #this is telling the script to grab each row and then passes it to the method write_markdown, which
-    for row in 2..@worksheet.num_rows
-      #2..ws.num_rows.each do |row|
+    over_rows('INSTITUTIONS_KEY') do |row|
       write_institutionsmarkdown row
-
     end
   end
 
@@ -36,13 +29,8 @@ namespace :import do
   task :students do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
-
-    for row in 2..@worksheet.num_rows
+    over_rows('PEOPLE_FORM_KEY') do |row|
       write_studentmarkdown row
-
     end
   end
 
@@ -97,7 +85,8 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
-categories: #{research_area.gsub(/,/, ' ')}
+categories:#{program_name.gsub(/,/, ' ')}
+tags:  #{research_area.gsub(/,/, ' ')} 
 other: #{other_research_areas}
 website: #{personal_website}
 ---
@@ -150,3 +139,16 @@ website: #{program_url}
   write_file(base_name, contents)
 end
 
+
+def get_worksheet(key)
+  session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+
+  session.spreadsheet_by_key(ENV[key]).worksheets[0]
+end
+
+def over_rows(key)
+  worksheet = get_worksheet(key)
+  for row in 2..worksheet.num_rows
+    yield(row)
+  end
+end

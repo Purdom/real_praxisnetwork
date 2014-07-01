@@ -158,12 +158,27 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
-document.ready(function(){
-    $("#grad-programs").isotope({
-itemSelector: '.grad-program', 
-layoutMode: 'fitRows'
-
-});
+  $('document').ready(function(){
+        // select container for isotope instance
+        var institutions = $('#program-list');
+        // initialize isotope instance with options
+        institutions.isotope({
+            itemSelector: '.program',
+            layoutMode: 'vertical',
+            getSortData: {
+                name: '[data-name]'
+            },
+            sortBy: 'name'
+        });
+        // script for button click filters
+        $('#filters').on('click', 'button', function(){
+            var filterValue = $( this ).attr('data-filter');
+            institutions.isotope({ filter: filterValue });
+            //removes .is-checked from other buttons
+            $('#filters').children('button').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
+        });
     });
 
 </script>

@@ -7,6 +7,38 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>ohio state</title>
+        <description>&lt;h1 id=&quot;ohio-state&quot;&gt;ohio state&lt;/h1&gt;
+
+&lt;p&gt;ohio state university&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;ohio. lorem. &lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/institution/undergraduate%20program/2014/07/01/ohio_state/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/undergraduate%20program/2014/07/01/ohio_state/</guid>
+      </item>
+    
+      <item>
+        <title>capitals Matter</title>
+        <description>&lt;h1 id=&quot;capitals-matter&quot;&gt;capitals Matter&lt;/h1&gt;
+
+&lt;p&gt;UVA&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;lorem.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 30 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/institution/other%20program/2014/06/30/capitals_matter/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/other%20program/2014/06/30/capitals_matter/</guid>
+      </item>
+    
+      <item>
         <title>THEPROGRAM</title>
         <description>&lt;h1 id=&quot;theprogram&quot;&gt;THEPROGRAM&lt;/h1&gt;
 
@@ -18,13 +50,13 @@
 
 </description>
         <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/graduate/program/2014/06/26/theprogram/</link>
-        <guid isPermaLink="true">http://yourdomain.com/graduate/program/2014/06/26/theprogram/</guid>
+        <link>http://yourdomain.com/institution/graduate%20program/2014/06/26/theprogram/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/graduate%20program/2014/06/26/theprogram/</guid>
       </item>
     
       <item>
-        <title>praxis program</title>
-        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;praxis program&lt;/h1&gt;
+        <title>Praxis program</title>
+        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;Praxis program&lt;/h1&gt;
 
 &lt;p&gt;lab&lt;/p&gt;
 
@@ -34,13 +66,13 @@
 
 </description>
         <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/undergraduate/program/2014/06/26/praxis_program/</link>
-        <guid isPermaLink="true">http://yourdomain.com/undergraduate/program/2014/06/26/praxis_program/</guid>
+        <link>http://yourdomain.com/institution/undergraduate%20program/2014/06/26/praxis_program/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/undergraduate%20program/2014/06/26/praxis_program/</guid>
       </item>
     
       <item>
-        <title>praxis-lite</title>
-        <description>&lt;h1 id=&quot;praxis-lite&quot;&gt;praxis-lite&lt;/h1&gt;
+        <title>Praxis-lite</title>
+        <description>&lt;h1 id=&quot;praxis-lite&quot;&gt;Praxis-lite&lt;/h1&gt;
 
 &lt;p&gt;uva&lt;/p&gt;
 
@@ -50,8 +82,24 @@
 
 </description>
         <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/other/program/2014/06/26/praxis-lite_/</link>
-        <guid isPermaLink="true">http://yourdomain.com/other/program/2014/06/26/praxis-lite_/</guid>
+        <link>http://yourdomain.com/institution/other%20program/2014/06/26/praxis-lite_/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/other%20program/2014/06/26/praxis-lite_/</guid>
+      </item>
+    
+      <item>
+        <title>MITH</title>
+        <description>&lt;h1 id=&quot;mith&quot;&gt;MITH&lt;/h1&gt;
+
+&lt;p&gt;MITH&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;lorem.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/institution/graduate%20program/2014/06/26/mith/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/graduate%20program/2014/06/26/mith/</guid>
       </item>
     
       <item>
@@ -66,12 +114,12 @@
 
 </description>
         <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/graduate/program/2014/06/26/dh_fellows/</link>
-        <guid isPermaLink="true">http://yourdomain.com/graduate/program/2014/06/26/dh_fellows/</guid>
+        <link>http://yourdomain.com/institution/graduate%20program/2014/06/26/dh_fellows/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institution/graduate%20program/2014/06/26/dh_fellows/</guid>
       </item>
     
       <item>
-        <title>test_purdom</title>
+        <title>Test_purdom</title>
         <description>&lt;h1 id=&quot;testpurdom&quot;&gt;test_purdom&lt;/h1&gt;
 
 &lt;p&gt;Praxis Program (UVA)
@@ -81,8 +129,8 @@
 
 </description>
         <pubDate>Wed, 18 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-06-18-test_purdom</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-06-18-test_purdom</guid>
+        <link>http://yourdomain.com/2014/06/18/test_purdom/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/06/18/test_purdom/</guid>
       </item>
     
   </channel>

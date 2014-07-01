@@ -160,9 +160,9 @@
 <script>
     $('document').ready(function(){
         // select container for isotope instance
-        var container = $('#program-list');
+        var institutions = $('#program-list');
         // initialize isotope instance with options
-        container.isotope({
+        institutions.isotope({
             itemSelector: '.program',
             layoutMode: 'vertical',
             getSortData: {
@@ -173,7 +173,7 @@
         // script for button click filters
         $('#filters').on('click', 'button', function(){
             var filterValue = $( this ).attr('data-filter');
-            container.isotope({ filter: filterValue });
+            institutions.isotope({ filter: filterValue });
             //removes .is-checked from other buttons
             $('#filters').children('button').removeClass('is-checked');
             //adds .is-checked to current filter button

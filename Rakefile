@@ -12,8 +12,6 @@ SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
 USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
 USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
-task :default => 'import:all'
-
 def login
   @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
 end
@@ -146,8 +144,8 @@ website: #{program_url}
 end
 
 def over_rows(key)
-  get_worksheet(key)
-  for row in 2..@worksheet.num_rows
+  worksheet = get_worksheet(key)
+  for row in 2..worksheet.num_rows
     yield(row)
   end
 end

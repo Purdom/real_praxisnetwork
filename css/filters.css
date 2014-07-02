@@ -1,7 +1,7 @@
 #student-filters {
     float:left;
     width: 40%;
-    font-size: 12px;
+    font-size: 16px;
     padding-right: 10px;
 }
 
@@ -10,14 +10,16 @@
     width: 60%;
 }
 
-#programs {
-    color: white;
+#institution-filters {
+    float:left;
+    width: 40%;
+    font-size: 16px;
+    padding-right: 10px;
 }
 
-#filters button {
-    color: white;
-    background-color: #005766;
-    padding: 5px;
+#program-list {
+    float:right;
+    width: 60%;
 }
 
 #programs .program a {
@@ -25,7 +27,7 @@
 }
 
 .is-checked {
-  background-color: #19DDFF;
+  font-weight: bold;
 }
 
 #programs .program {

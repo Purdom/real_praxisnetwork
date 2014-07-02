@@ -181,11 +181,11 @@
             sortBy: 'name'
         });
         // script for button click filters
-        $('#filters').on('click', 'button', function(){
+        $('#institution-filters').on('click', 'a', function(){
             var filterValue = $( this ).attr('data-filter');
             institutions.isotope({ filter: filterValue });
             //removes .is-checked from other buttons
-            $('#filters').children('button').removeClass('is-checked');
+            $('#institution-filters').find('a').removeClass('is-checked');
             //adds .is-checked to current filter button
             $(this).addClass('is-checked');
         });
@@ -205,10 +205,10 @@
         $('#student-filters').on('click', 'a', function(){
             var filterValue = $( this ).attr('data-filter');
             students.isotope({ filter: filterValue });
-            //removes .is-checked from other buttons
-            // $('#student-filters').children('button').removeClass('is-checked');
-            // //adds .is-checked to current filter button
-            // $(this).addClass('is-checked');
+            // removes .is-checked from other buttons
+            $('#student-filters').find('a').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
         });
     });
 </script>

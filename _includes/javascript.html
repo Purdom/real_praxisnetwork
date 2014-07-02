@@ -3,8 +3,19 @@
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
   $('document').ready(function(){
-        // select container for isotope instance
-        var institutions = $('#program-list');
+      //holds javascript until document has finished loading
+      $('#student-program-list').hide();
+      $('#student-research-areas').hide();
+      //event handlers to show filter dropdowns on students page
+      $('#research-area-dropdown').on('click', function(){
+        $('#student-research-areas').toggle();
+        });
+      $('#program-dropdown').on('click', function(){
+        $('#student-program-list').toggle();
+        });
+
+
+      var institutions = $('#program-list');
         // initialize isotope instance with options
         institutions.isotope({
             itemSelector: '.program',

@@ -7,6 +7,96 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>phd student</title>
+        <description>&lt;h1 id=&quot;phd-student&quot;&gt;phd student&lt;/h1&gt;
+
+&lt;p&gt;PhD Lab in Digital Knowledge (Duke)
+  1/1/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-phd_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-phd_student</guid>
+      </item>
+    
+      <item>
+        <title>mellon student</title>
+        <description>&lt;h1 id=&quot;mellon-student&quot;&gt;mellon student&lt;/h1&gt;
+
+&lt;p&gt;Mellon Scholars program (Hope College)
+  12/31/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-mellon_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-mellon_student</guid>
+      </item>
+    
+      <item>
+        <title>ma student</title>
+        <description>&lt;h1 id=&quot;ma-student&quot;&gt;ma student&lt;/h1&gt;
+
+&lt;p&gt;MA/MSc program (UCL)
+  1/1/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-ma_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-ma_student</guid>
+      </item>
+    
+      <item>
+        <title>interactive student</title>
+        <description>&lt;h1 id=&quot;interactive-student&quot;&gt;interactive student&lt;/h1&gt;
+
+&lt;p&gt;Interactive Arts and Science Program (Brock University)
+  1/1/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-interactive_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-interactive_student</guid>
+      </item>
+    
+      <item>
+        <title>honors-level</title>
+        <description>&lt;h1 id=&quot;honors-level&quot;&gt;honors-level&lt;/h1&gt;
+
+&lt;p&gt;Honors-level digital humanities program (University of Canterbury)
+  1/1/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-honors-level</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-honors-level</guid>
+      </item>
+    
+      <item>
+        <title>digital student</title>
+        <description>&lt;h1 id=&quot;digital-student&quot;&gt;digital student&lt;/h1&gt;
+
+&lt;p&gt;Digital Fellows Program (CUNY)
+  1/1/2014
+  site
+  twitter&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-digital_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-digital_student</guid>
+      </item>
+    
+      <item>
         <title>Scott Bailey</title>
         <description>&lt;h1 id=&quot;scott-bailey&quot;&gt;Scott Bailey&lt;/h1&gt;
 
@@ -65,102 +155,6 @@
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-01-eric_rochester</link>
         <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-eric_rochester</guid>
-      </item>
-    
-      <item>
-        <title>capitals Matter</title>
-        <description>&lt;h1 id=&quot;capitals-matter&quot;&gt;capitals Matter&lt;/h1&gt;
-
-&lt;p&gt;UVA&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;lorem.&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 30 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/other/program/2014/06/30/capitals_matter/</link>
-        <guid isPermaLink="true">http://yourdomain.com/other/program/2014/06/30/capitals_matter/</guid>
-      </item>
-    
-      <item>
-        <title>THEPROGRAM</title>
-        <description>&lt;h1 id=&quot;theprogram&quot;&gt;THEPROGRAM&lt;/h1&gt;
-
-&lt;p&gt;uva&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;lorem.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/graduate/program/2014/06/26/theprogram/</link>
-        <guid isPermaLink="true">http://yourdomain.com/graduate/program/2014/06/26/theprogram/</guid>
-      </item>
-    
-      <item>
-        <title>Praxis program</title>
-        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;Praxis program&lt;/h1&gt;
-
-&lt;p&gt;lab&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;sketch out calendar for the fall, even if not shared, to see how the commitment levels &lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/undergraduate/program/2014/06/26/praxis_program/</link>
-        <guid isPermaLink="true">http://yourdomain.com/undergraduate/program/2014/06/26/praxis_program/</guid>
-      </item>
-    
-      <item>
-        <title>Praxis-lite</title>
-        <description>&lt;h1 id=&quot;praxis-lite&quot;&gt;Praxis-lite&lt;/h1&gt;
-
-&lt;p&gt;uva&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;lots of missions&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/other/program/2014/06/26/praxis-lite_/</link>
-        <guid isPermaLink="true">http://yourdomain.com/other/program/2014/06/26/praxis-lite_/</guid>
-      </item>
-    
-      <item>
-        <title>MITH</title>
-        <description>&lt;h1 id=&quot;mith&quot;&gt;MITH&lt;/h1&gt;
-
-&lt;p&gt;MITH&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;lorem.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/graduate/program/2014/06/26/mith/</link>
-        <guid isPermaLink="true">http://yourdomain.com/graduate/program/2014/06/26/mith/</guid>
-      </item>
-    
-      <item>
-        <title>DH Fellows</title>
-        <description>&lt;h1 id=&quot;dh-fellows&quot;&gt;DH Fellows&lt;/h1&gt;
-
-&lt;p&gt;University of Virginia&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;lorem.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/graduate/program/2014/06/26/dh_fellows/</link>
-        <guid isPermaLink="true">http://yourdomain.com/graduate/program/2014/06/26/dh_fellows/</guid>
       </item>
     
   </channel>

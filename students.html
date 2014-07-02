@@ -2,43 +2,52 @@
 layout: default
 title: Praxis Network Student Directory
 ---
+<div id="student-intro">
+  <h1>Praxis Network Student Directory</h1>
+  <p>Brief introduction to the purpose and audience of the student directory.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ante libero. Sed rutrum enim ut commodo accumsan. Ut nec justo sollicitudin, dignissim nulla eu, consectetur ipsum. Suspendisse blandit justo at mi accumsan, vel sollicitudin purus vulputate. Cras mollis hendrerit dolor sit amet pretium. Ut congue, ligula ut mattis commodo, ligula turpis auctor massa, non dapibus libero nunc vitae turpis. Vestibulum odio neque, malesuada quis semper sed, pellentesque sit amet lacus. Praesent in consectetur eros. Cras porta, sapien eu porttitor bibendum, lectus metus scelerisque eros, sit amet venenatis felis risus vel erat.</p>
+</div>
 
-<div id='programs'>
+<div id="students">
 
-  <div id='student_filters'>
-    <div id="primaryfilters">
-      <button class="is-checked" data-filter="*">All Students</button>
-      <button data-filter=".programs">Praxis Network Programs</button>
-      <button data-filter=".research">Areas of Research</button>
-    </div>
-
-    <div><!--this would only show once someone clicks on one of the buttons to expand to specific research areas or program names, 2 separate divs-->
-      <div id="programfilters">
-        <button class="is-checked" data-filter="*">All Programs</button>
-        <button class="is-checked" data-filter=".universityofvirginia">University of Virginia</button>
-        <button class="is-checked" data-filter=".michiganstate University">Michigan State University</button>
-        <button class="is-checked" data-filter=".hopecollege">Hope College</button>
-        <button class="is-checked" data-filter=".graduatecentercuny">Graduate Center CUNY</button>
-        <button class="is-checked" data-filter=".universitycollegelondon">University College London</button>
-        <button class="is-checked" data-filter=".dukeuniversity">Duke University</button>
-        <button class="is-checked" data-filter=".brockuniversity">Brock University</button>
-        <button class="is-checked" data-filter=".universityofcanterbury">University of Canturbury</button>
-      </div>
-      <div id="researchfilters">
-        <button class="is-checked" data-filter="*">All Areas of Research</button>
-        <button data-filter=".textual">Texual Analysis</button>
-        <button data-filter=".software">Software Development</button>
-        <button data-filter=".spatial">Spatial Humanities</button>
-        <button data-filter=".visualization">Visualization</button>
-      </div>
+  <div id="student-filters">
+    <div>
+      <ul>
+        <li><a>All Students</a></li>
+        <li><a id="program-dropdown">Programs</a></li>
+          <div id="student-program-list">
+            <ul>
+              <li><a data-filter=".praxis">Praxis Program (UVa)</a></li>
+              <li><a data-filter=".cultural">Cultural Heritage Informatics (CHI) Initiative (MSU)</a></li>
+              <li><a data-filter=".mellon">Mellon Scholars program (Hope College)</a></li>
+              <li><a data-filter=".fellows">Digital Fellows Program (CUNY)</a></li>
+              <li><a data-filter=".(UCL)">MA/MSc program (UCL)</a></li>
+              <li><a data-filter=".phd">PhD Lab in Digital Knowledge (Duke)</a></li>
+              <li><a data-filter=".interactive">Interactive Arts and Science Program (Brock University)</a></li>
+              <li><a data-filter=".honors-level">Honors-level digital humanities program (University of Canterbury)</a></li>
+            </ul>
+          </div>
+        <li><a id="research-area-dropdown">Research Areas</a></li>
+            <div id="student-research-areas">
+              <ul>
+                <li><a data-filter=".textual">Textual Analysis</a></li>
+                <li><a data-filter=".software">Software Development</a></li>
+                <li><a data-filter=".visualizations">Visualizations</a></li>
+                <li><a data-filter=".spatial">Spatial Humanities</a></li>
+                <li><a data-filter=".other">Other</a></li>
+              </ul>
+            </div>
+      </ul>
     </div>
   </div>
 
   <div id="student-list">
     {% for post in site.categories['student'] %}
-      <div class="{{post.categories |join: ' '}}" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-      </a>
-    </div>
-  {% endfor %}
+        <div class="{{ post.categories | join: ' ' }}" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+            </a>
+        </div>
+      {% endfor %}
   </div>
+
+</div>

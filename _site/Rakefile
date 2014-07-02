@@ -21,6 +21,15 @@ def get_worksheet(key)
   @worksheet = @session.spreadsheet_by_key(ENV[key]).worksheets[0]
 end
 
+def over_rows(key)
+  worksheet = get_worksheet(key)
+  for row in 2..worksheet.num_rows
+    yield(row)
+  end
+end
+
+task :default => 'import:all'
+
 namespace :import do
 
   desc "import all institutions."
@@ -42,7 +51,7 @@ namespace :import do
   end
 
   desc "Generate markup for both institutions and students"
-  task :all => ['import:institutions', 'import:students']
+  multitask :all => ['import:institutions', 'import:students']
 
 end
 
@@ -137,11 +146,4 @@ website: #{program_url}
 #{mission_statement}
   "
   write_file(base_name, contents)
-end
-
-def over_rows(key)
-  worksheet = get_worksheet(key)
-  for row in 2..worksheet.num_rows
-    yield(row)
-  end
 end

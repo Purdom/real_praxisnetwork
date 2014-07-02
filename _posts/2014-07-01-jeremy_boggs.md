@@ -9,9 +9,8 @@ website: clioweb.org
 ---
 # Jeremy Boggs
 
-  PhD Lab in Digital Knowledge (Duke)
-  4/10/2005
-  clioweb.org
-  clioweb
-
+## Program Name: PhD Lab in Digital Knowledge (Duke)
+### Year Entering Fellowship:  4/10/2005
+### Personal Website:  clioweb.org
+### Twitter Handle:  clioweb
   

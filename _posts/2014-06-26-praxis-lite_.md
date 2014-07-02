@@ -7,12 +7,9 @@ categories: Other Program
 other: library
 website: praxis.com
 ---
-# Praxis-lite 
-
-  uva
+# Praxis-lite , uva
 
 ## Mission Statement
 
 lots of missions
-
   

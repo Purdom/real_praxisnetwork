@@ -96,11 +96,10 @@ website: #{personal_website}
 ---
 # #{student_name}
 
-  #{program_name}
-  #{year_entering_fellowship}
-  #{personal_website}
-  #{twitter_handle}
-
+## Program Name: #{program_name}
+### Year Entering Fellowship:  #{year_entering_fellowship}
+### Personal Website:  #{personal_website}
+### Twitter Handle:  #{twitter_handle}
   "
 
   write_file(base_name, contents)
@@ -131,14 +130,11 @@ categories: #{population_supported.gsub(/,/, ' ')}
 other: #{other_population_supported}
 website: #{program_url}
 ---
-# #{program_name}
-
-  #{institution_name}
+# #{program_name}, #{institution_name}
 
 ## Mission Statement
 
 #{mission_statement}
-
   "
   write_file(base_name, contents)
 end

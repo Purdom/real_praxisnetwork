@@ -7,12 +7,9 @@ categories: Undergraduate Program
 other: 
 website: www.cnn.com
 ---
-# ohio state
-
-  ohio state university
+# ohio state, ohio state university
 
 ## Mission Statement
 
 ohio. lorem. 
-
   

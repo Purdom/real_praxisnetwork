@@ -7,12 +7,9 @@ categories: Graduate Program
 other: 
 website: www.cnn.com
 ---
-# THEPROGRAM
-
-  uva
+# THEPROGRAM, uva
 
 ## Mission Statement
 
 lorem.
-
   

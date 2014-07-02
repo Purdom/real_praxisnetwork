@@ -12,7 +12,14 @@ SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
 USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
 USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
-task :default => 'import:all'
+def login
+  @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+end
+
+def get_worksheet(key)
+  login
+  @worksheet = @session.spreadsheet_by_key(ENV[key]).worksheets[0]
+end
 
 namespace :import do
 
@@ -63,8 +70,6 @@ def write_file(base_name, contents)
   ensure
     file.close unless file == nil
   end
-
-
 end
 
 #This method writes a markdown file (for students) for any row passed to it
@@ -85,18 +90,16 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
-categories:#{program_name.gsub(/,/, ' ')}
-tags:  #{research_area.gsub(/,/, ' ')} 
+categories: [student, #{program_name}, #{research_area}]
 other: #{other_research_areas}
 website: #{personal_website}
 ---
 # #{student_name}
 
-  #{program_name}
-  #{year_entering_fellowship}
-  #{personal_website}
-  #{twitter_handle}
-
+## Program Name: #{program_name}
+### Year Entering Fellowship:  #{year_entering_fellowship}
+### Personal Website:  #{personal_website}
+### Twitter Handle:  #{twitter_handle}
   "
 
   write_file(base_name, contents)
@@ -127,23 +130,13 @@ categories: #{population_supported.gsub(/,/, ' ')}
 other: #{other_population_supported}
 website: #{program_url}
 ---
-# #{program_name}
-
-  #{institution_name}
+# #{program_name}, #{institution_name}
 
 ## Mission Statement
 
-  #{mission_statement}
-
+#{mission_statement}
   "
   write_file(base_name, contents)
-end
-
-
-def get_worksheet(key)
-  session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-  session.spreadsheet_by_key(ENV[key]).worksheets[0]
 end
 
 def over_rows(key)

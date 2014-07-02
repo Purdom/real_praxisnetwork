@@ -9,9 +9,8 @@ website: erochester.com
 ---
 # Eric Rochester
 
-  Cultural Heritage Informatics (CHI) Initiative (MSU)
-  3/24/1999
-  erochester.com
-  erochester
-
+## Program Name: Cultural Heritage Informatics (CHI) Initiative (MSU)
+### Year Entering Fellowship:  3/24/1999
+### Personal Website:  erochester.com
+### Twitter Handle:  erochester
   

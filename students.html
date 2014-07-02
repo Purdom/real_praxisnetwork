@@ -2,63 +2,43 @@
 layout: default
 title: Praxis Network Student Directory
 ---
-<h1>Praxis Network Student Directory</h1>
-<p>Brief introduction to the purpose and audience of the student directory.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ante libero. Sed rutrum enim ut commodo accumsan.</p>
 
 <div id='programs'>
 
   <div id='student_filters'>
-    <!--put buttons here, the three big buttons: All, Programs, Research Area-->
+    <div id="primaryfilters">
+      <button class="is-checked" data-filter="*">All Students</button>
+      <button data-filter=".programs">Praxis Network Programs</button>
+      <button data-filter=".research">Areas of Research</button>
+    </div>
+
     <div><!--this would only show once someone clicks on one of the buttons to expand to specific research areas or program names, 2 separate divs-->
+      <div id="programfilters">
+        <button class="is-checked" data-filter="*">All Programs</button>
+        <button class="is-checked" data-filter=".universityofvirginia">University of Virginia</button>
+        <button class="is-checked" data-filter=".michiganstate University">Michigan State University</button>
+        <button class="is-checked" data-filter=".hopecollege">Hope College</button>
+        <button class="is-checked" data-filter=".graduatecentercuny">Graduate Center CUNY</button>
+        <button class="is-checked" data-filter=".universitycollegelondon">University College London</button>
+        <button class="is-checked" data-filter=".dukeuniversity">Duke University</button>
+        <button class="is-checked" data-filter=".brockuniversity">Brock University</button>
+        <button class="is-checked" data-filter=".universityofcanterbury">University of Canturbury</button>
+      </div>
+      <div id="researchfilters">
+        <button class="is-checked" data-filter="*">All Areas of Research</button>
+        <button data-filter=".textual">Texual Analysis</button>
+        <button data-filter=".software">Software Development</button>
+        <button data-filter=".spatial">Spatial Humanities</button>
+        <button data-filter=".visualization">Visualization</button>
+      </div>
     </div>
   </div>
 
   <div id="student-list">
-      {% for post in site.categories['student'] %}
-        <div class="{{post.categories |join: ' '}}" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
-       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-       </a>
-      </div>
-      {% endfor %}
- </div>
-
-<!--
-<div id="student_directory">
-
-  <div id="primaryfilters">
-      <button class="is-checked" data-filter="*">All Students</button>
-      <button data-filter=".programs">Praxis Network Programs</button>
-      <button data-filter=".research">Areas of Research</button>
-  </div>
-
-  <div id="programfilters">
-    <button class="is-checked" data-filter="*">All Programs</button>
-    <button class="is-checked" data-filter=".universityofvirginia">University of Virginia</button>
-    <button class="is-checked" data-filter=".michiganstate University">Michigan State University</button>
-    <button class="is-checked" data-filter=".hopecollege">Hope College</button>
-    <button class="is-checked" data-filter=".graduatecentercuny">Graduate Center CUNY</button>
-    <button class="is-checked" data-filter=".universitycollegelondon">University College London</button>
-    <button class="is-checked" data-filter=".dukeuniversity">Duke University</button>
-    <button class="is-checked" data-filter=".brockuniversity">Brock University</button>
-    <button class="is-checked" data-filter=".universityofcanterbury">University of Canturbury</button>
-  </div>
-
-
-<div id="researchfilters">
-      <button class="is-checked" data-filter="*">All Areas of Research</button>
-      <button data-filter=".textual">Texual Analysis</button>
-      <button data-filter=".software">Software Development</button>
-      <button data-filter=".spatial">Spatial Humanities</button>
-      <button data-filter=".visualization">Visualization</button>
+    {% for post in site.categories['student'] %}
+      <div class="{{post.categories |join: ' '}}" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+      </a>
     </div>
-
-
-<div id="programs-list">
-      {% for post in site.categories['programs'] %}
-      <div class="programs" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
-       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-       </a>
-      </div>
-      {% endfor %}
- -->
+  {% endfor %}
+  </div>

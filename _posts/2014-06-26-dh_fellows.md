@@ -7,12 +7,9 @@ categories: Graduate Program
 other: 
 website: www.cnn.com
 ---
-# DH Fellows
-
-  University of Virginia
+# DH Fellows, University of Virginia
 
 ## Mission Statement
 
 lorem.
-
   

@@ -1,13 +1,13 @@
 #student-filters {
     float:left;
-    width: 30%;
+    width: 40%;
     font-size: 12px;
     padding-right: 10px;
 }
 
 #student-list {
     float:right;
-    width: 70%;
+    width: 60%;
 }
 
 #programs {

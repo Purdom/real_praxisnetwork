@@ -63,8 +63,6 @@ def write_file(base_name, contents)
   ensure
     file.close unless file == nil
   end
-
-
 end
 
 #This method writes a markdown file (for students) for any row passed to it

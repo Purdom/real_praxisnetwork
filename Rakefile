@@ -52,7 +52,7 @@ namespace :import do
   end
 
   desc "Generate markup for both institutions and students"
-  task :all => ['import:institutions', 'import:students']
+  multitask :all => ['import:institutions', 'import:students']
 
 end
 

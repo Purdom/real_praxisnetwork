@@ -97,7 +97,7 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
-categories: #{research_area.gsub(/,/, ' ')}
+categories: [student, #{program_name}, #{research_area}]
 other: #{other_research_areas}
 website: #{personal_website}
 ---

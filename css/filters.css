@@ -1,14 +1,18 @@
-body {
+#student-filters {
+    float:left;
+    width: 30%;
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+#student-list {
+    float:right;
+    width: 70%;
+}
+
+#programs {
     color: white;
 }
-
-/*#filters {
-    float: left;
-}
-
-#program-list {
-    float: right;
-}*/
 
 #filters button {
     color: white;
@@ -16,7 +20,7 @@ body {
     padding: 5px;
 }
 
-.program a {
+#programs .program a {
     color: white;
 }
 
@@ -24,7 +28,16 @@ body {
   background-color: #19DDFF;
 }
 
-.program {
+#programs .program {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+.student {
     width: 125px;
     height: 125px;
     margin: 5px;
@@ -41,6 +54,6 @@ body {
     background-color: #0083AA;
 }
 
-.other {
+#program-list .other {
     background-color: #1B2544;
 }

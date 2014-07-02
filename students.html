@@ -2,46 +2,54 @@
 layout: default
 title: Praxis Network Student Directory
 ---
-<h1>Praxis Network Student Directory</h1>
-<p>Brief introduction to the purpose and audience of the student directory.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ante libero. Sed rutrum enim ut commodo accumsan. Ut nec justo sollicitudin, dignissim nulla eu, consectetur ipsum. Suspendisse blandit justo at mi accumsan, vel sollicitudin purus vulputate. Cras mollis hendrerit dolor sit amet pretium. Ut congue, ligula ut mattis commodo, ligula turpis auctor massa, non dapibus libero nunc vitae turpis. Vestibulum odio neque, malesuada quis semper sed, pellentesque sit amet lacus. Praesent in consectetur eros. Cras porta, sapien eu porttitor bibendum, lectus metus scelerisque eros, sit amet venenatis felis risus vel erat.</p>
+<div id="student-intro">
+  <h1>Praxis Network Student Directory</h1>
+  <p>Brief introduction to the purpose and audience of the student directory.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ante libero. Sed rutrum enim ut commodo accumsan. Ut nec justo sollicitudin, dignissim nulla eu, consectetur ipsum. Suspendisse blandit justo at mi accumsan, vel sollicitudin purus vulputate. Cras mollis hendrerit dolor sit amet pretium. Ut congue, ligula ut mattis commodo, ligula turpis auctor massa, non dapibus libero nunc vitae turpis. Vestibulum odio neque, malesuada quis semper sed, pellentesque sit amet lacus. Praesent in consectetur eros. Cras porta, sapien eu porttitor bibendum, lectus metus scelerisque eros, sit amet venenatis felis risus vel erat.</p>
+</div>
 
-<h1>Software Development</h1>
-<ul>
-  {% for post in site.categories['software'] %}
-   <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
+<div id="students">
 
-<h1>Spatial Humanities</h1>
-<ul>
-  {% for posts in site.categories['spatial'] %}
-   <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
+  <div id="student-filters">
+    <div>
+      <ul>
+        <li>All Students</li>
+        <li><a id="program-dropdown" href="#">Programs</a></li>
+          <div id="student-program-list">
+            <ul>
+              <li>Praxis Program (UVa)</li>
+              <li>Cultural Heritage Informatics (CHI) Initiative (MSU)</li>
+              <li>Mellon Scholars program (Hope College)</li>
+              <li>Digital Fellows Program (CUNY)</li>
+              <li>MA/MSc program (UCL)</li>
+              <li>PhD Lab in Digital Knowledge (Duke)</li>
+              <li>Interactive Arts and Science Program (Brock University)</li>
+              <li>Honors-level digital humanities program (University of Canterbury)</li>
+            </ul>
+          </div>
+        <li><a href="#" id="research-area-dropdown">Research Areas</a></li>
+            <div id="student-research-areas">
+              <ul>
+                <li>Textual Analysis</li>
+                <li>Software Development</li>
+                <li>Visualizations</li>
+                <li>Spatial Humanities</li>
+                <li>Other</li>
+              </ul>
+            </div>
+      </ul>
+    </div>
 
-<h1>Textual Analysis</h1>
-<ul>
-  {% for posts in site.categoriesi['textual'] %}
-   <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
 
-<h1>Visualizations</h1>
-<ul>
-  {% for posts in site.categories['visualizations'] %}
-   <li>
-  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
+  </div>
+
+  <div id="student-list">
+    {% for post in site.categories['student'] %}
+        <div class="{{ post.categories | join: ' ' }}" data-name="{{ post.title | downcase | replace: ' ', '_' }}">
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+            </a>
+        </div>
+      {% endfor %}
+  </div>
+
+</div>

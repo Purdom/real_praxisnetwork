@@ -3,7 +3,7 @@ layout: posts
 status: publish
 #permalink: posts/institutions/2014-06-26-praxis-lite_
 title: Praxis-lite 
-categories: [institution, Other Program]
+categories: Other Program
 other: library
 website: praxis.com
 ---
@@ -13,6 +13,6 @@ website: praxis.com
 
 ## Mission Statement
 
-  lots of missions
+lots of missions
 
   

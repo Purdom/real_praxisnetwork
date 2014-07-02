@@ -14,6 +14,15 @@ USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
 task :default => 'import:all'
 
+def login
+  @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+end
+
+def get_worksheet(key)
+  login
+  @worksheet = @session.spreadsheet_by_key(ENV[key]).worksheets[0]
+end
+
 namespace :import do
 
   desc "import all institutions."
@@ -130,22 +139,15 @@ website: #{program_url}
 
 ## Mission Statement
 
-  #{mission_statement}
+#{mission_statement}
 
   "
   write_file(base_name, contents)
 end
 
-
-def get_worksheet(key)
-  session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-  session.spreadsheet_by_key(ENV[key]).worksheets[0]
-end
-
 def over_rows(key)
-  worksheet = get_worksheet(key)
-  for row in 2..worksheet.num_rows
+  get_worksheet(key)
+  for row in 2..@worksheet.num_rows
     yield(row)
   end
 end

@@ -3,7 +3,7 @@ layout: posts
 status: publish
 #permalink: posts/institutions/2014-07-01-ohio_state
 title: ohio state
-categories: [institution, Undergraduate Program]
+categories: Undergraduate Program
 other: 
 website: www.cnn.com
 ---
@@ -13,6 +13,6 @@ website: www.cnn.com
 
 ## Mission Statement
 
-  ohio. lorem. 
+ohio. lorem. 
 
   

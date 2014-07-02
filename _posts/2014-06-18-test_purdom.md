@@ -3,8 +3,7 @@ layout: post
 status: publish
 permalink: posts/students/2014-06-18-test_purdom
 title: test_purdom
-categories:Praxis Program (UVA)
-tags:   
+categories: [student, Praxis Program (UVA), ]
 other: 
 website: test_test_test
 ---

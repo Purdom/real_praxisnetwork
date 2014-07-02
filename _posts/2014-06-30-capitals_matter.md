@@ -3,7 +3,7 @@ layout: posts
 status: publish
 #permalink: posts/institutions/2014-06-30-capitals_matter
 title: capitals Matter
-categories: [institution, Other Program]
+categories: Other Program
 other: capital
 website: www.cnn.com
 ---
@@ -13,6 +13,6 @@ website: www.cnn.com
 
 ## Mission Statement
 
-  lorem.
+lorem.
 
   

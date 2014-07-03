@@ -9,9 +9,8 @@ website: site
 ---
 # honors-level
 
-  Honors-level digital humanities program (University of Canterbury)
-  1/1/2014
-  site
-  twitter
-
+## Program Name: Honors-level digital humanities program (University of Canterbury)
+### Year Entering Fellowship:  1/1/2014
+### Personal Website:  site
+### Twitter Handle:  twitter
   

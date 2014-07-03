@@ -9,9 +9,8 @@ website: www.csbailey.org
 ---
 # Scott Bailey
 
-  Praxis Program (UVA)
-  3/29/1985
-  www.csbailey.org
-  @csbailey5t
-
+## Program Name: Praxis Program (UVA)
+### Year Entering Fellowship:  3/29/1985
+### Personal Website:  www.csbailey.org
+### Twitter Handle:  @csbailey5t
   

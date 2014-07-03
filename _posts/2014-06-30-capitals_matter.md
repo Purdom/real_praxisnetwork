@@ -7,12 +7,9 @@ categories: Other Program
 other: capital
 website: www.cnn.com
 ---
-# capitals Matter
-
-  UVA
+# capitals Matter, UVA
 
 ## Mission Statement
 
-  lorem.
-
+lorem.
   

@@ -9,9 +9,8 @@ website: site
 ---
 # interactive student
 
-  Interactive Arts and Science Program (Brock University)
-  1/1/2014
-  site
-  twitter
-
+## Program Name: Interactive Arts and Science Program (Brock University)
+### Year Entering Fellowship:  1/1/2014
+### Personal Website:  site
+### Twitter Handle:  twitter
   

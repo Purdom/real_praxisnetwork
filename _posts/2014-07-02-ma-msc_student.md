@@ -9,9 +9,8 @@ website: site
 ---
 # ma-msc student
 
-  MA-MSc program (UCL)
-  1/1/2014
-  site
-  twitter
-
+## Program Name: MA-MSc program (UCL)
+### Year Entering Fellowship:  1/1/2014
+### Personal Website:  site
+### Twitter Handle:  twitter
   

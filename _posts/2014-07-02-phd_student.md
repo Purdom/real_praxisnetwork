@@ -9,9 +9,8 @@ website: site
 ---
 # phd student
 
-  PhD Lab in Digital Knowledge (Duke)
-  1/1/2014
-  site
-  twitter
-
+## Program Name: PhD Lab in Digital Knowledge (Duke)
+### Year Entering Fellowship:  1/1/2014
+### Personal Website:  site
+### Twitter Handle:  twitter
   

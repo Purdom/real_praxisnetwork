@@ -9,9 +9,8 @@ website: test_test_test
 ---
 # test_purdom
 
-  Praxis Program (UVA)
-  1/1/2014
-  test_test_test
-  testing_for_reals
-
+## Program Name: Praxis Program (UVA)
+### Year Entering Fellowship:  1/1/2014
+### Personal Website:  test_test_test
+### Twitter Handle:  testing_for_reals
   

@@ -9,9 +9,8 @@ website: site
 ---
 # mellon student
 
-  Mellon Scholars program (Hope College)
-  12/31/2014
-  site
-  twitter
-
+## Program Name: Mellon Scholars program (Hope College)
+### Year Entering Fellowship:  12/31/2014
+### Personal Website:  site
+### Twitter Handle:  twitter
   

@@ -130,7 +130,7 @@ def write_institutionsmarkdown (row)
   puts population_supported
 
   contents               = "---
-layout: posts
+layout: post
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{program_name}

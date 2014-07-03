@@ -51,7 +51,7 @@ namespace :import do
   end
 
   desc "Generate markup for both institutions and students"
-  multitask :all => ['import:institutions', 'import:students']
+  task :all => ['import:institutions', 'import:students']
 
 end
 
@@ -131,7 +131,7 @@ def write_institutionsmarkdown (row)
   puts population_supported
 
   contents               = "---
-layout: posts
+layout: post
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{program_name}

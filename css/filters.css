@@ -1,38 +1,113 @@
-body {
-  color: #F7F7F7;
-}
-
-/*#filters {
+#student-filters {
     float:left;
+    width: 40%;
+    font-size: 16px;
+    padding-right: 10px;
 }
 
-#program-list{
+#student-list {
     float:right;
-}*/
+    width: 60%;
+}
 
-  #filters button{
-    color: #F7F7F7;
-    background-color: #FFA500;
+#institution-filters {
+    float:left;
+    width: 40%;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+#program-list {
+    float:right;
+    width: 60%;
+}
+
+#programs .program a {
+    color: white;
+}
+
+#student-list a {
+    color: white;
+}
+
+.is-checked {
+  font-weight: bold;
+}
+
+#programs .program {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
     padding: 5px;
 }
 
-.program a {
-  width: 150 px;
-  height: 150 px;
-  margin: 5 px;
-  border: 2 px solid black;
-  text-align: center;
-  padding: 5 px;
+.student {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
 }
 
+/* colors for different types of institutions */
+
 .graduate {
-    background color: #8B8682;
+    background-color: #018B72;
 }
 
 .undergraduate {
-     background color: #388E8E;
+    background-color: #F0522B;
 }
 
-.other {
-  background color: #FFA500;
+#program-list .other {
+    background-color: #D54E88;
 }
+
+/* colors for different programs */
+
+.praxis {
+    background-color: #018B72;
+}
+
+.cultural {
+    background-color: #F0522B;
+}
+
+.mellon {
+    background-color: #D54E88;
+}
+
+.fellows {
+    background-color: #DFAF4B;
+}
+
+.ma-msc {
+    background-color: #4B3C39;
+}
+
+.phd {
+    background-color: #B4CD3E;
+}
+
+.interactive {
+    background-color: #0069AA;
+}
+
+.honors-level {
+    background-color: #7D7B7E;
+}
+
+/*palette
+018B72 ultramarine green
+F0522B tangerine tango
+D54E88 pink flambe
+DFAF4B honey gold
+4B3C39 french roast
+B4CD3E bright chartreuse
+0069AA olympian blue
+7D7B7E titanium
+A288AD rhapsody light purple
+E6C9BB rose smoke offwhite */

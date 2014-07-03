@@ -1,21 +1,19 @@
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/js/isotope.pkgd.min.js"></script>
 <script>
-  $('document').ready(function(){
-      //holds javascript until document has finished loading
-      $('#student-program-list').hide();
-      $('#student-research-areas').hide();
-      //event handlers to show filter dropdowns on students page
-      $('#research-area-dropdown').on('click', function(){
-        $('#student-research-areas').toggle();
+    $('document').ready(function(){
+        // hides filter dropdowns on students page
+        $('#student-program-list').hide();
+        $('#student-research-areas').hide();
+        //event handlers to show filter dropdowns on students page
+        $('#program-dropdown').on('click', function(){
+            $('#student-program-list').toggle();
         });
-      $('#program-dropdown').on('click', function(){
-        $('#student-program-list').toggle();
+        $('#research-area-dropdown').on('click', function(){
+            $('#student-research-areas').toggle();
         });
-
-
-      var institutions = $('#program-list');
+        // select container for isotope instance
+        var institutions = $('#program-list');
         // initialize isotope instance with options
         institutions.isotope({
             itemSelector: '.program',
@@ -26,15 +24,34 @@
             sortBy: 'name'
         });
         // script for button click filters
-        $('#filters').on('click', 'button', function(){
+        $('#institution-filters').on('click', 'a', function(){
             var filterValue = $( this ).attr('data-filter');
             institutions.isotope({ filter: filterValue });
-            students.isotope({ filter: filterValue });
             //removes .is-checked from other buttons
-            $('#filters').children('button').removeClass('is-checked');
+            $('#institution-filters').find('a').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
+        });
+
+         // select container for isotope instance
+        var students = $('#student-list');
+        // initialize isotope instance with options
+        students.isotope({
+            itemSelector: '.student',
+            layoutMode: 'masonry',
+            getSortData: {
+                name: '[data-name]'
+            },
+            sortBy: 'name'
+        });
+        // script for button click filters
+        $('#student-filters').on('click', 'a', function(){
+            var filterValue = $( this ).attr('data-filter');
+            students.isotope({ filter: filterValue });
+            // removes .is-checked from other buttons
+            $('#student-filters').find('a').removeClass('is-checked');
             //adds .is-checked to current filter button
             $(this).addClass('is-checked');
         });
     });
-
 </script>

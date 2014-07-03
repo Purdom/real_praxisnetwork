@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: post
 status: publish
 #permalink: posts/institutions/2014-06-26-praxis-lite_
 title: Praxis-lite 

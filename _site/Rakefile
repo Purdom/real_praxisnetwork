@@ -5,6 +5,7 @@ require "rubygems"
 require "dotenv"
 require "google_drive"
 require "date"
+require "ffaker"
 
 Dotenv.load
 
@@ -28,9 +29,43 @@ def over_rows(key)
   end
 end
 
+def fake_over_rows(worksheet)
+  for row in 2..worksheet.count
+    yield(row)
+  end
+end
+
+
+def fake_student
+  [
+    '7/1/2014 15:25:51',
+    Faker::Name.name,
+    "Praxis",
+    "3/9/1985",
+    Faker::Internet.domain_name,
+    "@#{Faker::Internet.user_name}",
+    "visualizations",
+    Faker::Lorem.words(rand(1..3)).join(',').gsub(/,/, ' '),
+  ]
+end
+
 task :default => 'import:all'
 
 namespace :import do
+
+  desc "adding fake data"
+  task :fake_it do
+    @worksheet = Array.new
+    250.times do
+      @worksheet << fake_student
+    end
+    #    write_studentmarkdown row
+    puts @worksheet.count
+
+    fake_over_rows(@worksheet) do |row|
+      write_fake_student row
+    end
+  end
 
   desc "import all institutions."
   task :institutions do
@@ -58,12 +93,13 @@ end
 def parse_date(date)
   parts = date.to_s.split(' ')
   date_components = parts[0].split('/')
-  "%04d-%02d-%02d" % [date_components[2], date_components[0], date_components[1]]
+  "%04d-%02d-%02d" % [date_components[2].to_i, date_components[0].to_i, date_components[1].to_i]
 end
 
 def make_name (string, date = Date.now)
+  puts string
   d = parse_date(date)
-  slug = string.gsub(/ /,"_").downcase
+  slug = string.to_s.gsub(/ /,"_").downcase
   "#{d}-#{slug}" #look at what wayne did with slugify in the codespeak
 end
 
@@ -112,6 +148,38 @@ website: #{personal_website}
   "
 
   write_file(base_name, contents)
+end
+
+def write_fake_student(row)
+  timestamp = row[0]
+  student_name = row[1]
+  program_name = row[2]
+  year_entering_fellowship = row[3]
+  personal_website = row[4]
+  twitter_handle = row[5]
+  research_area = row[6]
+  other_research_areas = row[7]
+  base_name = make_name(student_name, timestamp)
+
+    contents = "---
+layout: post
+status: publish
+permalink: posts/students/#{base_name}
+title: #{student_name}
+categories: [student, #{program_name}, #{research_area}]
+other: #{other_research_areas}
+website: #{personal_website}
+---
+# #{student_name}
+
+## Program Name: #{program_name}
+### Year Entering Fellowship:  #{year_entering_fellowship}
+### Personal Website:  #{personal_website}
+### Twitter Handle:  #{twitter_handle}
+  "
+
+  write_file(base_name, contents)
+
 end
 
 #This method writes a markdown file (for institutions) for any row passed to it

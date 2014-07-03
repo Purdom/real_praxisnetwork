@@ -12,6 +12,22 @@ SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
 USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
 USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
+def login
+  @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+end
+
+def get_worksheet(key)
+  login
+  @worksheet = @session.spreadsheet_by_key(ENV[key]).worksheets[0]
+end
+
+def over_rows(key)
+  worksheet = get_worksheet(key)
+  for row in 2..worksheet.num_rows
+    yield(row)
+  end
+end
+
 task :default => 'import:all'
 
 namespace :import do
@@ -20,15 +36,8 @@ namespace :import do
   task :institutions do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
-
-    #this is telling the script to grab each row and then passes it to the method write_markdown, which
-    for row in 2..@worksheet.num_rows
-      #2..ws.num_rows.each do |row|
+    over_rows('INSTITUTIONS_KEY') do |row|
       write_institutionsmarkdown row
-
     end
   end
 
@@ -36,13 +45,8 @@ namespace :import do
   task :students do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
-
-    for row in 2..@worksheet.num_rows
+    over_rows('PEOPLE_FORM_KEY') do |row|
       write_studentmarkdown row
-
     end
   end
 
@@ -75,8 +79,6 @@ def write_file(base_name, contents)
   ensure
     file.close unless file == nil
   end
-
-
 end
 
 #This method writes a markdown file (for students) for any row passed to it
@@ -103,11 +105,10 @@ website: #{personal_website}
 ---
 # #{student_name}
 
-  #{program_name}
-  #{year_entering_fellowship}
-  #{personal_website}
-  #{twitter_handle}
-
+## Program Name: #{program_name}
+### Year Entering Fellowship:  #{year_entering_fellowship}
+### Personal Website:  #{personal_website}
+### Twitter Handle:  #{twitter_handle}
   "
 
   write_file(base_name, contents)
@@ -138,15 +139,11 @@ categories: #{population_supported.gsub(/,/, ' ')}
 other: #{other_population_supported}
 website: #{program_url}
 ---
-# #{program_name}
-
-  #{institution_name}
+# #{program_name}, #{institution_name}
 
 ## Mission Statement
 
-  #{mission_statement}
-
+#{mission_statement}
   "
   write_file(base_name, contents)
 end
-

@@ -35,18 +35,55 @@ def fake_over_rows(worksheet)
   end
 end
 
-
 def fake_student
   [
-    '7/1/2014 15:25:51',
+    fake_date,
     Faker::Name.name,
-    "Praxis",
-    "3/9/1985",
-    Faker::Internet.domain_name,
+    fake_institution,
+    fake_date,
+    "http://#{Faker::Internet.domain_name}",
     "@#{Faker::Internet.user_name}",
-    "visualizations",
+    fake_research_area,
     Faker::Lorem.words(rand(1..3)).join(',').gsub(/,/, ' '),
   ]
+end
+
+def fake_research_area
+  [
+    "Textual Analysis",
+    "Software Development",
+    "Visualizations",
+    "Spatial Humanities",
+    "Other"
+  ].sample.to_s
+end
+
+def fake_institution
+  [
+    "Praxis Program (UVA)",
+    "Cultural Heritage Informatics (CHI) Initiative (MSU)",
+    "Mellon Scholars program (Hope College)",
+    "Digital Fellows Program (CUNY)",
+    "MA-MSc program (UCL)",
+    "PhD Lab in Digital Knowledge (Duke)",
+    "Interactive Arts and Science Program (Brock University)",
+    "Honors-level digital humanities program (University of Canterbury)"
+  ].sample.to_s
+end
+
+def fake_date(from = 0.0, to = Time.now)
+  Time.at(from + rand * (to.to_f - from.to_f)).strftime("%-m/%-d/%Y %H:%M:%S")
+end
+
+def fake_student_worksheet(count)
+
+  worksheet = Array.new
+
+  count.to_i.times do
+    worksheet << fake_student
+  end
+
+  worksheet
 end
 
 task :default => 'import:all'
@@ -55,16 +92,17 @@ namespace :import do
 
   desc "adding fake data"
   task :fake_it do
-    @worksheet = Array.new
-    250.times do
-      @worksheet << fake_student
-    end
-    #    write_studentmarkdown row
-    puts @worksheet.count
+    worksheet = Array.new
 
-    fake_over_rows(@worksheet) do |row|
+    250.times do
+      worksheet << fake_student
+    end
+
+    worksheet.each do |row|
       write_fake_student row
     end
+
+
   end
 
   desc "import all institutions."
@@ -117,6 +155,39 @@ def write_file(base_name, contents)
   end
 end
 
+def write_fake_student(row)
+  timestamp = row[0]
+  student_name = row[1]
+  program_name = row[2]
+  year_entering_fellowship = row[3]
+  personal_website = row[4]
+  twitter_handle = row[5]
+  research_area = row[6]
+  other_research_areas = row[7]
+  base_name = make_name(student_name, timestamp)
+
+    contents = "---
+layout: post
+status: publish
+permalink: posts/students/#{base_name}
+title: #{student_name}
+categories: [student, #{program_name}, #{research_area}]
+other: #{other_research_areas}
+website: #{personal_website}
+---
+# #{student_name}
+
+## Program Name: #{program_name}
+### Year Entering Fellowship:  #{year_entering_fellowship}
+### Personal Website:  #{personal_website}
+### Twitter Handle:  #{twitter_handle}
+  "
+
+  write_file(base_name, contents)
+
+end
+
+
 #This method writes a markdown file (for students) for any row passed to it
 def write_studentmarkdown (row)
   timestamp                   = @worksheet[row, 1]
@@ -148,38 +219,6 @@ website: #{personal_website}
   "
 
   write_file(base_name, contents)
-end
-
-def write_fake_student(row)
-  timestamp = row[0]
-  student_name = row[1]
-  program_name = row[2]
-  year_entering_fellowship = row[3]
-  personal_website = row[4]
-  twitter_handle = row[5]
-  research_area = row[6]
-  other_research_areas = row[7]
-  base_name = make_name(student_name, timestamp)
-
-    contents = "---
-layout: post
-status: publish
-permalink: posts/students/#{base_name}
-title: #{student_name}
-categories: [student, #{program_name}, #{research_area}]
-other: #{other_research_areas}
-website: #{personal_website}
----
-# #{student_name}
-
-## Program Name: #{program_name}
-### Year Entering Fellowship:  #{year_entering_fellowship}
-### Personal Website:  #{personal_website}
-### Twitter Handle:  #{twitter_handle}
-  "
-
-  write_file(base_name, contents)
-
 end
 
 #This method writes a markdown file (for institutions) for any row passed to it
@@ -214,4 +253,9 @@ website: #{program_url}
 #{mission_statement}
   "
   write_file(base_name, contents)
+end
+
+desc "Clean up _posts directory"
+task :clean do
+  `rm -f _posts/*.md`
 end

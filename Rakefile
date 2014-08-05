@@ -120,12 +120,11 @@ categories: [student, #{program_name}, #{research_area}]
 other: #{other_research_areas}
 website: #{personal_website}
 ---
-# #{student_name}
+#{student_name}
 
-## Program Name: #{program_name}
-### Year Entering Fellowship:  #{year_entering_fellowship}
-### Personal Website:  #{personal_website}
-### Twitter Handle:  #{twitter_handle}
+Program Name: #{program_name}
+Personal Website:  #{personal_website}
+Twitter Handle:  #{twitter_handle}
   "
 
   write_file(base_name, contents)
@@ -154,13 +153,19 @@ title: #{student_name}
 categories: [student, #{program_name}, #{research_area}]
 other: #{other_research_areas}
 website: #{personal_website}
+twitter:  #{twitter_handle}
 ---
-# #{student_name}
+  <div class='student-info'>
+    <header class='post-header'>
+      <h1>#{student_name}</h1>
+      <h2>#{program_name}</h2>
+    </header>
+  </div>
 
-## Program Name: #{program_name}
-### Year Entering Fellowship:  #{year_entering_fellowship}
-### Personal Website:  #{personal_website}
-### Twitter Handle:  #{twitter_handle}
+  <div class='student-contact'>
+    <h3>#{personal_website}</h3>
+    <h3>#{twitter_handle}</h3>
+  </div>  
   "
 
   write_file(base_name, contents)
@@ -193,8 +198,7 @@ website: #{program_url}
 ---
 # #{program_name}, #{institution_name}
 
-## Mission Statement
-
+Mission Statement
 #{mission_statement}
   "
   write_file(base_name, contents)

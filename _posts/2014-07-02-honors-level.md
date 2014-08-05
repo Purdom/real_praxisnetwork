@@ -4,18 +4,11 @@ status: publish
 permalink: posts/students/2014-07-02-honors-level
 title: honors-level
 categories: [student, Honors-level digital humanities program (University of Canterbury), Visualizations, Other]
+research: Visualizations, Other
 other: wow research
+program: Honors-level digital humanities program (University of Canterbury)
 website: site
 twitter:  twitter
+image: ../../../images/color_icon_test.jpg
 ---
-  <div class='student-info'>
-    <header class='post-header'>
-      <h1>honors-level</h1>
-    </header>
-  </div>
-
-  <div class='student-contact'>
-    <h3>site</h3>
-    <h3>twitter</h3>
-  </div>  
-  
+   

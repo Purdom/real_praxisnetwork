@@ -7,18 +7,17 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Really Testing</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Aug 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/graduate/program/other/program/2014/08/05/really_testing/</link>
+        <guid isPermaLink="true">http://yourdomain.com/graduate/program/other/program/2014/08/05/really_testing/</guid>
+      </item>
+    
+      <item>
         <title>phd student</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;phd student&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-phd_student</link>
@@ -27,17 +26,7 @@
     
       <item>
         <title>mellon student</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;mellon student&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-mellon_student</link>
@@ -46,17 +35,7 @@
     
       <item>
         <title>ma-msc student</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;ma-msc student&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-ma-msc_student</link>
@@ -65,17 +44,7 @@
     
       <item>
         <title>interactive student</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;interactive student&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-interactive_student</link>
@@ -84,17 +53,7 @@
     
       <item>
         <title>honors-level</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;honors-level&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-honors-level</link>
@@ -103,17 +62,7 @@
     
       <item>
         <title>digital student</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;digital student&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;site&lt;/h3&gt;
-    &lt;h3&gt;twitter&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-02-digital_student</link>
@@ -121,31 +70,17 @@
       </item>
     
       <item>
-        <title>Scott Bailey</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;Scott Bailey&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;www.csbailey.org&lt;/h3&gt;
-    &lt;h3&gt;@csbailey5t&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <title>Scott_bailey</title>
+        <description>
 </description>
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-01-scott_bailey</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-scott_bailey</guid>
+        <link>http://yourdomain.com/2014/07/01/scott_bailey/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/07/01/scott_bailey/</guid>
       </item>
     
       <item>
         <title>ohio state</title>
-        <description>&lt;h1 id=&quot;ohio-state-ohio-state-university&quot;&gt;ohio state, ohio state university&lt;/h1&gt;
-
-&lt;p&gt;Mission Statement
-ohio. lorem. &lt;/p&gt;
-
+        <description>
 </description>
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/undergraduate/program/2014/07/01/ohio_state/</link>
@@ -154,40 +89,11 @@ ohio. lorem. &lt;/p&gt;
     
       <item>
         <title>Jeremy Boggs</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;Jeremy Boggs&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;clioweb.org&lt;/h3&gt;
-    &lt;h3&gt;clioweb&lt;/h3&gt;
-  &lt;/div&gt;
-
+        <description>
 </description>
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</link>
         <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</guid>
-      </item>
-    
-      <item>
-        <title>Eric Rochester</title>
-        <description>&lt;div class=&quot;student-info&quot;&gt;
-    &lt;header class=&quot;post-header&quot;&gt;
-      &lt;h1&gt;Eric Rochester&lt;/h1&gt;
-    &lt;/header&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;student-contact&quot;&gt;
-    &lt;h3&gt;erochester.com&lt;/h3&gt;
-    &lt;h3&gt;erochester&lt;/h3&gt;
-  &lt;/div&gt;
-
-</description>
-        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-01-eric_rochester</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-eric_rochester</guid>
       </item>
     
   </channel>

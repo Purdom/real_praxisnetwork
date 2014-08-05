@@ -151,23 +151,14 @@ status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
 categories: [student, #{program_name}, #{research_area}]
+research: #{research_area}
 other: #{other_research_areas}
+program: #{program_name}
 website: #{personal_website}
 twitter:  #{twitter_handle}
+image: ../../../images/color_icon_test.jpg
 ---
-  <div class='student-info'>
-    <header class='post-header'>
-      <h1>#{student_name}</h1>
-      <h2>#{program_name}</h2>
-      <h3>#{research_area}</h3>
-    </header>
-  </div>
-
-  <div class='student-contact'>
-    <h3>#{personal_website}</h3>
-    <h3>#{twitter_handle}</h3>
-  </div>  
-  "
+   "
 
   write_file(base_name, contents)
 end
@@ -189,18 +180,16 @@ def write_institutionsmarkdown (row)
   puts population_supported
 
   contents               = "---
-layout: post
+layout: institution
 status: publish
 #permalink: posts/institutions/#{base_name}
 title: #{program_name}
 categories: #{population_supported.gsub(/,/, ' ')}
+population: #{population_supported.gsub(/,/, ' ')}
 other: #{other_population_supported}
 website: #{program_url}
+mission: #{mission_statement}
 ---
-# #{program_name}, #{institution_name}
-
-Mission Statement
-#{mission_statement}
   "
   write_file(base_name, contents)
 end

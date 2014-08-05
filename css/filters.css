@@ -59,59 +59,76 @@ ul {
 /* colors for different types of institutions */
 
 .graduate {
-    background-color: #018B72;
+    background-color: #5F9688;
 }
 
 .undergraduate {
-    background-color: #F0522B;
+    background-color: #F7913F;
 }
 
 #program-list .other {
-    background-color: #0069AA;
+    background-color: #1B616D;
 }
 
 /* colors for different programs */
 
 .praxis {
-    background-color: #018B72;
+    background-color: #50687F;
 }
 
 .cultural {
-    background-color: #F0522B;
+    background-color: #9CAC7E;
 }
 
 .mellon {
-    background-color: #D54E88;
+    background-color: #9B6873;
 }
 
 .fellows {
-    background-color: #DFAF4B;
+    background-color: #D59CB5;
 }
 
 .ma-msc {
-    background-color: #A288AD;
+    background-color: #F7913F;
 }
 
 .phd {
-    background-color: #B4CD3E;
+    background-color: #76AC9C;
 }
 
 .interactive {
-    background-color: #0069AA;
+    background-color: #4893B2;
 }
 
 .honors-level {
     background-color: #7D7B7E;
 }
 
-/*palette
+/*palette 1
 018B72 ultramarine green
 F0522B tangerine tango
 D54E88 pink flambe
 DFAF4B honey gold
 4B3C39 french roast
-B4CD3E bright chartreuse
+B4CD3E bright chartreuse 
 0069AA olympian blue
-7D7B7E titanium
+7D7B7E titanium -honors-level
 A288AD rhapsody light purple
 E6C9BB rose smoke offwhite */
+
+/*palette 2 monochromatic/complementary
+programs:
+50687F dark-grey -praxis
+4893B2 blue -interactive
+7A9B0C green -cultural
+D59CB5 light rose-fellows
+76AC9C grey-blue-phd
+9B545E rose -mellon
+F7913F orange ma-msc
+7D7B7E grey honors-level
+
+institutions:
+85859B grad
+1B616D other
+55684F undergrad
+ */

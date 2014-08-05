@@ -1,7 +1,7 @@
 # Site settings
-title: The Real Slim Shady
-email: marshall@mathers.com
-description: "Allied Rappers of D-12 baby"
+title: Praxis Network Directories
+email: scholarslab@virginia.edu
+description: "placeholder for short description"
 baseurl: ""
 url: "http://yourdomain.com"
 
@@ -12,4 +12,3 @@ sass:
   sass_dir: _sass
   style: :compressed
 category_dir:
-  

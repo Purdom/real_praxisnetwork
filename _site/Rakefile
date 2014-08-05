@@ -159,6 +159,7 @@ twitter:  #{twitter_handle}
     <header class='post-header'>
       <h1>#{student_name}</h1>
       <h2>#{program_name}</h2>
+      <h3>#{research_area}</h3>
     </header>
   </div>
 

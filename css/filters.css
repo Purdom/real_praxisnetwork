@@ -15,6 +15,20 @@ h2 {
   min-height: 60%;
 }
 
+.institution-info {
+  float:left;
+  width: 70%;
+}
+
+.institution-contact {
+   float:right;
+  width: 30%;
+}
+
+.institution-content{
+  min-height: 60%;
+}
+
 #student-filters {
     float:left;
     width: 40%;

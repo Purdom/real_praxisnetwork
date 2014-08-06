@@ -18,7 +18,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
-a         { color: #4A7DB0; text-decoration: none; }
+a:link    { color: #4A7DB0; text-decoration: none; }
 a:hover   { color: #7A8DA0; }
 a:visited { color: #84A9B0; }
 

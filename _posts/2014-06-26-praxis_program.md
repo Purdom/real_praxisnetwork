@@ -12,5 +12,6 @@ sketch out calendar for the fall, even if not shared, to see how the commitment 
  
     
      
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

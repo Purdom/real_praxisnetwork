@@ -8,5 +8,6 @@ population: Graduate Program
 other: 
 website: www.cnn.com
 mission: lorem.
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

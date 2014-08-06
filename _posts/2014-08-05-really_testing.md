@@ -8,5 +8,6 @@ population: Graduate Program  Other Program
 other: Library
 website: http://www.purdom.org
 mission: Lots of CSS work
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

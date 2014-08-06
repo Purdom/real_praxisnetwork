@@ -8,5 +8,6 @@ population: Other Program
 other: library
 website: praxis.com
 mission: lots of missions
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

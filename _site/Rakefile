@@ -189,6 +189,7 @@ population: #{population_supported.gsub(/,/, ' ')}
 other: #{other_population_supported}
 website: #{program_url}
 mission: #{mission_statement}
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   "
   write_file(base_name, contents)

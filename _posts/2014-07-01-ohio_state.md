@@ -8,5 +8,6 @@ population: Undergraduate Program
 other: 
 website: www.cnn.com
 mission: ohio. lorem. 
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

@@ -8,5 +8,6 @@ population: Other Program
 other: capital
 website: www.cnn.com
 mission: lorem.
+image: ../../../../../../../../../../../../images/inst_demo.jpg
 ---
   

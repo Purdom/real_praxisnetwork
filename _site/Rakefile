@@ -182,14 +182,14 @@ def write_institutionsmarkdown (row)
   contents               = "---
 layout: institution
 status: publish
-#permalink: posts/institutions/#{base_name}
+permalink: posts/institutions/#{base_name}
 title: #{program_name}
 categories: #{population_supported.gsub(/,/, ' ')}
-population: #{population_supported.gsub(/,/, ' ')}
+population: #{population_supported}
 other: #{other_population_supported}
 website: #{program_url}
 mission: #{mission_statement}
-image: ../../../../../../../../../../../../images/inst_demo.jpg
+image: ../../../images/inst_demo.jpg
 ---
   "
   write_file(base_name, contents)

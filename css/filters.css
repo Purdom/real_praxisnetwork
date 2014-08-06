@@ -1,3 +1,7 @@
+body {
+  font-size: 18px;
+}
+
 h2 {
   color: #F7913F;}
 
@@ -32,7 +36,7 @@ h2 {
 #student-filters {
     float:left;
     width: 40%;
-    font-size: 16px;
+  /*  font-size: 16px; */
     padding-right: 10px;
 }
 
@@ -44,7 +48,7 @@ h2 {
 #institution-filters {
     float:left;
     width: 40%;
-    font-size: 16px;
+ /*  font-size: 16px; */
     padding-right: 10px;
 }
 

@@ -6,5 +6,95 @@
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
+      <item>
+        <title>Really Testing</title>
+        <description>
+</description>
+        <pubDate>Tue, 05 Aug 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/institutions/2014-08-05-really_testing</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/institutions/2014-08-05-really_testing</guid>
+      </item>
+    
+      <item>
+        <title>phd student</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-phd_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-phd_student</guid>
+      </item>
+    
+      <item>
+        <title>mellon student</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-mellon_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-mellon_student</guid>
+      </item>
+    
+      <item>
+        <title>ma-msc student</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-ma-msc_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-ma-msc_student</guid>
+      </item>
+    
+      <item>
+        <title>interactive student</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-interactive_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-interactive_student</guid>
+      </item>
+    
+      <item>
+        <title>honors-level</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-honors-level</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-honors-level</guid>
+      </item>
+    
+      <item>
+        <title>digital student</title>
+        <description>
+</description>
+        <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-02-digital_student</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-digital_student</guid>
+      </item>
+    
+      <item>
+        <title>Scott_bailey</title>
+        <description>
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2014/07/01/scott_bailey/</link>
+        <guid isPermaLink="true">http://yourdomain.com/2014/07/01/scott_bailey/</guid>
+      </item>
+    
+      <item>
+        <title>ohio state</title>
+        <description>
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/institutions/2014-07-01-ohio_state</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/institutions/2014-07-01-ohio_state</guid>
+      </item>
+    
+      <item>
+        <title>Jeremy Boggs</title>
+        <description>
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</guid>
+      </item>
+    
   </channel>
 </rss>

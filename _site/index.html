@@ -11,14 +11,17 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="http://praxis-network.org/c/styles.css" />
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css"> 
+    <link rel="stylesheet" href="/css/filters.css">
 
 </head>
+
 
 
     <body>
 
     <header class="site-header">
+
 
   <div class="wrap">
 
@@ -38,13 +41,13 @@
       </a>
       <div class="trigger">
         
-          <a class="page-link" href="/about/">About</a>
-        
-          <a class="page-link" href="/categories/"></a>
-        
           <a class="page-link" href="/feed.xml"></a>
         
           <a class="page-link" href="/"></a>
+        
+          <a class="page-link" href="/institutions/">Directory of Related Programs</a>
+        
+          <a class="page-link" href="/students/">Praxis Network Student Directory</a>
         
           <a class="page-link" href="/css/styles.css"></a>
         
@@ -58,9 +61,16 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="home">
+      <h1>Graduate Programs</h1>
+<ul>
+  
+</ul> 
 
-  <h1>Allied Programs</h1>
+
+
+<div class="home">
+
+  <h1>Related Programs</h1>
 
   <ul class="programs">
     
@@ -71,7 +81,7 @@
     <a href="https://docs.google.com/forms/d/12psqdYT1sZCOGjKgD9dyNX0kK3QC1NG7FyQjJwjNEH8/viewform?usp=send_form" class="instbutton">Add Program</a>
   </div>
 
-   <div class="btn">Student Directory</div>
+  <div class="btn">Student Directory</div>
   <div class="btn">
     <a href="https://docs.google.com/forms/d/1tImJjuCxN4rWAfkm7N4oYT5S12j1u0iOyW75h2Wbtbw/viewform?usp=send_form" class="instbutton">Add Name</a>
   </div>
@@ -87,11 +97,9 @@
 
   <div class="wrap">
 
-    <h2 class="footer-heading">Praxis Network Directories</h2>
-
     <div class="footer-col-1 column">
       <ul>
-        <li>Praxis Network Directories</li>
+        <li><h2>Praxis Network Directories</h2></li>
         <li><a href="mailto:scholarslab@virginia.edu">scholarslab@virginia.edu</a></li>
       </ul>
     </div>
@@ -144,6 +152,65 @@
   </div>
 
 </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/isotope.pkgd.min.js"></script>
+<script>
+    $('document').ready(function(){
+        // hides filter dropdowns on students page
+        $('#student-program-list').hide();
+        $('#student-research-areas').hide();
+        //event handlers to show filter dropdowns on students page
+        $('#program-dropdown').on('click', function(){
+            $('#student-program-list').toggle();
+        });
+        $('#research-area-dropdown').on('click', function(){
+            $('#student-research-areas').toggle();
+        });
+        // select container for isotope instance
+        var institutions = $('#program-list');
+        // initialize isotope instance with options
+        institutions.isotope({
+            itemSelector: '.program',
+            layoutMode: 'masonry',
+            getSortData: {
+                name: '[data-name]'
+            },
+            sortBy: 'name'
+        });
+        // script for button click filters
+        $('#institution-filters').on('click', 'a', function(){
+            var filterValue = $( this ).attr('data-filter');
+            institutions.isotope({ filter: filterValue });
+            //removes .is-checked from other buttons
+            $('#institution-filters').find('a').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
+        });
+
+         // select container for isotope instance
+        var students = $('#student-list');
+        // initialize isotope instance with options
+        students.isotope({
+            itemSelector: '.student',
+            layoutMode: 'masonry',
+            getSortData: {
+                name: '[data-name]'
+            },
+            sortBy: 'name'
+        });
+        // script for button click filters
+        $('#student-filters').on('click', 'a', function(){
+            var filterValue = $( this ).attr('data-filter');
+            students.isotope({ filter: filterValue });
+            // removes .is-checked from other buttons
+            $('#student-filters').find('a').removeClass('is-checked');
+            //adds .is-checked to current filter button
+            $(this).addClass('is-checked');
+        });
+    });
+</script>
 
 
     </body>

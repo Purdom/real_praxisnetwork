@@ -1,18 +1,29 @@
 ---
 layout: default
 ---
+<h1>Graduate Programs</h1>
+<ul>
+  {% for post in site.categories['Graduate'] %}
+    <li>
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
+  </a>
+  </li>
+{% endfor %}
+</ul> 
+
+
 
 <div class="home">
 
-  <h1>Allied Programs</h1>
+  <h1>Related Programs</h1>
 
   <ul class="programs">
     {% for institution in site.institutions %}
       <li>
-        <span class="institution-date">{{ institution.date | date: "%b %-d, %Y" }}</span>
-        <a class="institution-link" href="{{ institution.url | prepend: site.baseurl }}">{{ institution.title }}</a>
-      </li>
-    {% endfor %}
+    <span class="institution-date">{{ institution.date | date: "%b %-d, %Y" }}</span>
+    <a class="institution-link" href="{{ institution.url | prepend: site.baseurl }}">{{ institution.title }}</a>
+    </li>
+  {% endfor %}
   </ul>
 
   <div class="btn">Add your program</div>
@@ -20,7 +31,7 @@ layout: default
     <a href="https://docs.google.com/forms/d/12psqdYT1sZCOGjKgD9dyNX0kK3QC1NG7FyQjJwjNEH8/viewform?usp=send_form" class="instbutton">Add Program</a>
   </div>
 
-   <div class="btn">Student Directory</div>
+  <div class="btn">Student Directory</div>
   <div class="btn">
     <a href="https://docs.google.com/forms/d/1tImJjuCxN4rWAfkm7N4oYT5S12j1u0iOyW75h2Wbtbw/viewform?usp=send_form" class="instbutton">Add Name</a>
   </div>

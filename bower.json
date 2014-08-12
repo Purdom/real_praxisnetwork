@@ -1,0 +1,23 @@
+{
+  "name": "real_praxisnetwork",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Purdom/real_praxisnetwork",
+  "authors": [
+    "Purdom <lindbla1@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "isotope": "~2.0.0"
+  }
+}

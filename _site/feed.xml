@@ -7,21 +7,12 @@
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Really Testing</title>
-        <description>
-</description>
-        <pubDate>Tue, 05 Aug 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/institutions/2014-08-05-really_testing</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/institutions/2014-08-05-really_testing</guid>
-      </item>
-    
-      <item>
         <title>phd student</title>
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-phd_student</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-phd_student</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -29,8 +20,8 @@
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-mellon_student</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-mellon_student</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -38,8 +29,8 @@
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-ma-msc_student</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-ma-msc_student</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -47,8 +38,8 @@
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-interactive_student</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-interactive_student</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -56,8 +47,8 @@
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-honors-level</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-honors-level</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -65,8 +56,8 @@
         <description>
 </description>
         <pubDate>Wed, 02 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-02-digital_student</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-02-digital_student</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
       <item>
@@ -79,21 +70,30 @@
       </item>
     
       <item>
-        <title>ohio state</title>
-        <description>
-</description>
-        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/institutions/2014-07-01-ohio_state</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/institutions/2014-07-01-ohio_state</guid>
-      </item>
-    
-      <item>
         <title>Jeremy Boggs</title>
         <description>
 </description>
         <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</link>
-        <guid isPermaLink="true">http://yourdomain.com/posts/students/2014-07-01-jeremy_boggs</guid>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
+      </item>
+    
+      <item>
+        <title>Eric Rochester</title>
+        <description>
+</description>
+        <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
+      </item>
+    
+      <item>
+        <title>test_purdom</title>
+        <description>
+</description>
+        <pubDate>Wed, 18 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/posts/students/</link>
+        <guid isPermaLink="true">http://yourdomain.com/posts/students/</guid>
       </item>
     
   </channel>

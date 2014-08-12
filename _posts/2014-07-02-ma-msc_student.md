@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-permalink: posts/students/2014-07-02-ma-msc_student
+permalink: posts/students/
 title: ma-msc student
 categories: [student, MA-MSc program (UCL), Visualizations]
 research: Visualizations
@@ -11,4 +11,3 @@ website: site
 twitter:  twitter
 image: 5_paree_pink.jpg
 ---
-   

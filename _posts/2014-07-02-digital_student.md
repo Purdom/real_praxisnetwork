@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-permalink: posts/students/2014-07-02-digital_student
+permalink: posts/students/
 title: digital student
 categories: [student, Digital Fellows Program (CUNY), Textual Analysis]
 research: Textual Analysis
@@ -9,6 +9,5 @@ other:
 program: Digital Fellows Program (CUNY)
 website: site
 twitter:  twitter
-image: 2_paree_muddled.jpg
+image: 4_paree_blue.jpg
 ---
-   

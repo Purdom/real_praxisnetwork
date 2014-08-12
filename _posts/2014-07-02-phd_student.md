@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-permalink: posts/students/2014-07-02-phd_student
+permalink: posts/students/
 title: phd student
 categories: [student, PhD Lab in Digital Knowledge (Duke), Visualizations, Spatial Humanities]
 research: Visualizations, Spatial Humanities
@@ -9,6 +9,5 @@ other:
 program: PhD Lab in Digital Knowledge (Duke)
 website: site
 twitter:  twitter
-image: 4_paree_blue.jpg
+image: color_icon_test.jpg
 ---
-   

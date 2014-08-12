@@ -30,6 +30,23 @@ def over_rows(key)
   end
 end
 
+task :test do
+  generate_institutions
+end
+
+def generate_institutions
+  login
+  @worksheet = @session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
+
+  institutions = @worksheet.rows.dup
+  institutions.shift
+
+  institutions.each do |institution|
+    puts institution.inspect
+  end
+
+end
+
 task :default => 'import:all'
 
 namespace :import do
@@ -82,7 +99,7 @@ def make_name (string, date = Date.now)
   puts string
   d = parse_date(date)
   slug = string.to_s.gsub(/ /,"_").downcase
-  "#{d}-#{slug}" #look at what wayne did with slugify in the codespeak
+  "#{d}-#{slug}" 
 end
 
 def write_file(base_name, contents)
@@ -133,31 +150,19 @@ end
 
 #This method writes a markdown file (for students) for any row passed to it
 def write_studentmarkdown (row)
-  timestamp                   = @worksheet[row, 1]
-  student_name                = @worksheet[row, 2]
+  @timestamp                   = @worksheet[row, 1]
+  @student_name                = @worksheet[row, 2]
   #student_email               = @worksheet[row, 3]
-  program_name                = @worksheet[row, 7]
-  year_entering_fellowship    = @worksheet[row, 4]
-  personal_website            = @worksheet[row, 5]
-  twitter_handle              = @worksheet[row, 6]
-  research_area               = @worksheet[row, 8]
-  other_research_areas        = @worksheet[row, 9]
-  base_name                   = make_name(student_name, timestamp)
+  @program_name                = @worksheet[row, 7]
+  @year_entering_fellowship    = @worksheet[row, 4]
+  @personal_website            = @worksheet[row, 5]
+  @twitter_handle              = @worksheet[row, 6]
+  @research_area               = @worksheet[row, 8]
+  @other_research_areas        = @worksheet[row, 9]
+  base_name                    = make_name(@student_name, @timestamp)
+  @get_images= get_images
 
-  contents               = "---
-layout: post
-status: publish
-permalink: posts/students/#{base_name}
-title: #{student_name}
-categories: [student, #{program_name}, #{research_area}]
-research: #{research_area}
-other: #{other_research_areas}
-program: #{program_name}
-website: #{personal_website}
-twitter:  #{twitter_handle}
-image: #{get_images}
----
-   "
+  contents =render("lib/templates/student.html.erb")
 
   write_file(base_name, contents)
 end
@@ -166,36 +171,65 @@ def get_images
   File.basename Dir["images/*.{jpg, png, gif}"].sample
 end
 
+module PraxisProgram
+  class Page
+    def slugify
+
+    end
+
+    def render
+
+    end
+
+    def save
+
+    end
+
+    def notice
+
+    end
+
+    def image
+
+    end
+  end
+
+  class Student < Page
+    def initialize
+
+    end
+  end
+
+  class Institution < Page
+    def initialize
+ 
+    end
+  end
+end
 #This method writes a markdown file (for institutions) for any row passed to it
 def write_institutionsmarkdown (row)
-  timestamp                   = @worksheet[row, 1]
+  @timestamp                   = @worksheet[row, 1]
   #contact_name               = @worksheet[row, 2]
   #email                      = @worksheet[row, 3]
-  program_name                = @worksheet[row, 4]
-  program_url                 = @worksheet[row, 9]
-  institution_name            = @worksheet[row, 5]
+  @program_name                = @worksheet[row, 4]
+  @program_url                 = @worksheet[row, 9]
+  @institution_name            = @worksheet[row, 5]
   #program_address            = @worksheet[row, 6]
-  mission_statement           = @worksheet[row, 7]
-  population_supported        = @worksheet[row, 8]
-  other_population_supported  = @worksheet[row, 10]
-  base_name                   = make_name(program_name, timestamp)
+  @mission_statement           = @worksheet[row, 7]
+  @population_supported        = @worksheet[row, 8]
+  @other_population_supported  = @worksheet[row, 10]
+  base_name                   = make_name(@program_name, @timestamp)
 
-  puts population_supported
+  contents =render("lib/templates/institution.html.erb")
+  puts @population_supported
 
-  contents               = "---
-layout: institution
-status: publish
-permalink: posts/institutions/#{base_name}
-title: #{program_name}
-categories: #{population_supported.gsub(/,/, ' ')}
-population: #{population_supported}
-other: #{other_population_supported}
-website: #{program_url}
-mission: #{mission_statement}
-image: ../../../images/inst_demo.jpg
----
-  "
   write_file(base_name, contents)
+end
+
+def render(template_path)
+  template = File.open(template_path, "r").read
+  erb = ERB.new(template)
+  erb.result(binding)
 end
 
 desc "Clean up _posts directory"

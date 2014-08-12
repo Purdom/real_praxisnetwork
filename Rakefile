@@ -6,7 +6,7 @@ require "google_drive"
 require "date"
 require "ffaker"
 require "erb"
-require_relative "lib/student"
+#require_relative "lib/student"
 
 Dotenv.load
 

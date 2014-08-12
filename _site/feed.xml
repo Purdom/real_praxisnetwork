@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Real Slim Shady</title>
-    <description>Allied Rappers of D-12 baby</description>
+    <title>Praxis Network Directories</title>
+    <description>placeholder for short description</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
     
@@ -36,22 +36,6 @@
         <pubDate>Mon, 06 Oct 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/institutions/2014/10/06/ghi/</link>
         <guid isPermaLink="true">http://yourdomain.com/institutions/2014/10/06/ghi/</guid>
-      </item>
-    
-      <item>
-        <title>twelve mile</title>
-        <description>&lt;h1 id=&quot;twelve-mile&quot;&gt;twelve mile&lt;/h1&gt;
-
-&lt;p&gt;d-town&lt;/p&gt;
-
-&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
-
-&lt;p&gt;ipsum lorem&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 24 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/other/2014/06/24/twelve_mile/</link>
-        <guid isPermaLink="true">http://yourdomain.com/other/2014/06/24/twelve_mile/</guid>
       </item>
     
       <item>
@@ -113,15 +97,6 @@
       </item>
     
       <item>
-        <title>foo</title>
-        <description>&lt;h1 id=&quot;hi&quot;&gt;hi&lt;/h1&gt;
-</description>
-        <pubDate>Fri, 13 Jun 2014 00:00:00 -0400</pubDate>
-        <link>http://yourdomain.com/2014/06/13/test/</link>
-        <guid isPermaLink="true">http://yourdomain.com/2014/06/13/test/</guid>
-      </item>
-    
-      <item>
         <title>test</title>
         <description>&lt;h1 id=&quot;test&quot;&gt;test&lt;/h1&gt;
 
@@ -151,6 +126,38 @@
         <pubDate>Tue, 10 Jun 2014 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/undergraduate/program/graduate/program/2014/06/10/ghi/</link>
         <guid isPermaLink="true">http://yourdomain.com/undergraduate/program/graduate/program/2014/06/10/ghi/</guid>
+      </item>
+    
+      <item>
+        <title>praxis program</title>
+        <description>&lt;h1 id=&quot;praxis-program&quot;&gt;praxis program&lt;/h1&gt;
+
+&lt;p&gt;uva&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;blah blah&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 05 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/institutions/2014/06/05/praxis_program/</link>
+        <guid isPermaLink="true">http://yourdomain.com/institutions/2014/06/05/praxis_program/</guid>
+      </item>
+    
+      <item>
+        <title>8mile</title>
+        <description>&lt;h1 id=&quot;mile&quot;&gt;8mile&lt;/h1&gt;
+
+&lt;p&gt;slim&lt;/p&gt;
+
+&lt;h2 id=&quot;mission-statement&quot;&gt;Mission Statement&lt;/h2&gt;
+
+&lt;p&gt;testing again&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 02 Jun 2014 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/option/1/2014/06/02/8mile/</link>
+        <guid isPermaLink="true">http://yourdomain.com/option/1/2014/06/02/8mile/</guid>
       </item>
     
   </channel>

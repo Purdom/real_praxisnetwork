@@ -1,10 +1,12 @@
 #! /usr/bin/env ruby
 
-#rubygems is not technically required, but habit
 require "rubygems"
 require "dotenv"
 require "google_drive"
 require "date"
+require "ffaker"
+require "erb"
+require_relative "lib/student"
 
 Dotenv.load
 
@@ -12,23 +14,47 @@ SPREADSHEET_KEY      = ENV.fetch('SPREADSHEET_KEY', '')
 USER_EMAIL           = ENV.fetch('USER_EMAIL', '')
 USER_PASSWORD        = ENV.fetch('USER_PASSWORD', '')
 
+def login
+  @session ||= GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
+end
+
+def get_worksheet(key)
+  login
+  @worksheet = @session.spreadsheet_by_key(ENV[key]).worksheets[0]
+end
+
+def over_rows(key)
+  worksheet = get_worksheet(key)
+  for row in 2..worksheet.num_rows
+    yield(row)
+  end
+end
+
 task :default => 'import:all'
 
 namespace :import do
+
+  desc "adding fake data"
+  task :fake_it do
+    worksheet = Array.new
+
+    250.times do
+      worksheet << fake_student
+    end
+
+    worksheet.each do |row|
+      write_fake_student row
+    end
+
+
+  end
 
   desc "import all institutions."
   task :institutions do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['INSTITUTIONS_KEY']).worksheets[0]
-
-    #this is telling the script to grab each row and then passes it to the method write_markdown, which
-    for row in 2..@worksheet.num_rows
-      #2..ws.num_rows.each do |row|
+    over_rows('INSTITUTIONS_KEY') do |row|
       write_institutionsmarkdown row
-
     end
   end
 
@@ -36,13 +62,8 @@ namespace :import do
   task :students do
     puts "starting import"
 
-    session = GoogleDrive.login(ENV['GOOGLE_USER'], ENV['GOOGLE_PASSWORD'])
-
-    @worksheet = session.spreadsheet_by_key(ENV['PEOPLE_FORM_KEY']).worksheets[0]
-
-    for row in 2..@worksheet.num_rows
+    over_rows('PEOPLE_FORM_KEY') do |row|
       write_studentmarkdown row
-
     end
   end
 
@@ -52,14 +73,15 @@ namespace :import do
 end
 
 def parse_date(date)
-  parts = date.split(' ')
+  parts = date.to_s.split(' ')
   date_components = parts[0].split('/')
-  "%04d-%02d-%02d" % [date_components[2], date_components[0], date_components[1]]
+  "%04d-%02d-%02d" % [date_components[2].to_i, date_components[0].to_i, date_components[1].to_i]
 end
 
 def make_name (string, date = Date.now)
+  puts string
   d = parse_date(date)
-  slug = string.gsub(/ /,"_").downcase
+  slug = string.to_s.gsub(/ /,"_").downcase
   "#{d}-#{slug}" #look at what wayne did with slugify in the codespeak
 end
 
@@ -75,9 +97,39 @@ def write_file(base_name, contents)
   ensure
     file.close unless file == nil
   end
+end
 
+def write_fake_student(row)
+  timestamp = row[0]
+  student_name = row[1]
+  program_name = row[2]
+  year_entering_fellowship = row[3]
+  personal_website = row[4]
+  twitter_handle = row[5]
+  research_area = row[6]
+  other_research_areas = row[7]
+  base_name = make_name(student_name, timestamp)
+
+    contents = "---
+layout: post
+status: publish
+permalink: posts/students/#{base_name}
+title: #{student_name}
+categories: [student, #{program_name}, #{research_area}]
+other: #{other_research_areas}
+website: #{personal_website}
+---
+#{student_name}
+
+Program Name: #{program_name}
+Personal Website:  #{personal_website}
+Twitter Handle:  #{twitter_handle}
+  "
+
+  write_file(base_name, contents)
 
 end
+
 
 #This method writes a markdown file (for students) for any row passed to it
 def write_studentmarkdown (row)
@@ -88,6 +140,8 @@ def write_studentmarkdown (row)
   year_entering_fellowship    = @worksheet[row, 4]
   personal_website            = @worksheet[row, 5]
   twitter_handle              = @worksheet[row, 6]
+  research_area               = @worksheet[row, 8]
+  other_research_areas        = @worksheet[row, 9]
   base_name                   = make_name(student_name, timestamp)
 
   contents               = "---
@@ -95,18 +149,21 @@ layout: post
 status: publish
 permalink: posts/students/#{base_name}
 title: #{student_name}
+categories: [student, #{program_name}, #{research_area}]
+research: #{research_area}
+other: #{other_research_areas}
+program: #{program_name}
 website: #{personal_website}
+twitter:  #{twitter_handle}
+image: #{get_images}
 ---
-# #{student_name}
-
-  #{program_name}
-  #{year_entering_fellowship}
-  #{personal_website}
-  #{twitter_handle}
-
-  "
+   "
 
   write_file(base_name, contents)
+end
+
+def get_images
+  File.basename Dir["images/*.{jpg, png, gif}"].sample
 end
 
 #This method writes a markdown file (for institutions) for any row passed to it
@@ -126,23 +183,22 @@ def write_institutionsmarkdown (row)
   puts population_supported
 
   contents               = "---
-layout: posts
+layout: institution
 status: publish
-#permalink: posts/institutions/#{base_name}
+permalink: posts/institutions/#{base_name}
 title: #{program_name}
 categories: #{population_supported.gsub(/,/, ' ')}
+population: #{population_supported}
 other: #{other_population_supported}
 website: #{program_url}
+mission: #{mission_statement}
+image: ../../../images/inst_demo.jpg
 ---
-# #{program_name}
-
-  #{institution_name}
-
-## Mission Statement
-
-  #{mission_statement}
-
   "
   write_file(base_name, contents)
 end
 
+desc "Clean up _posts directory"
+task :clean do
+  `rm -f _posts/*.md`
+end

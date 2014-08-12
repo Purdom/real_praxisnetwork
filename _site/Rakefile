@@ -1,12 +1,11 @@
 #! /usr/bin/env ruby
 
-#rubygems is not technically required, but habit
 require "rubygems"
 require "dotenv"
 require "google_drive"
 require "date"
 require "ffaker"
-
+require "erb"
 require_relative "lib/student"
 
 Dotenv.load
@@ -156,11 +155,15 @@ other: #{other_research_areas}
 program: #{program_name}
 website: #{personal_website}
 twitter:  #{twitter_handle}
-image: ../../../images/color_icon_test.jpg
+image: #{get_images}
 ---
    "
 
   write_file(base_name, contents)
+end
+
+def get_images
+  File.basename Dir["images/*.{jpg, png, gif}"].sample
 end
 
 #This method writes a markdown file (for institutions) for any row passed to it
